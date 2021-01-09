@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
-// import Slider from "react-slick";
+
 
 export default function ImageCarousel() {
 //    let settings = {
