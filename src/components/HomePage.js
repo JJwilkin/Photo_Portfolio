@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Menu from './Menu.js'
 import Portraits from './Portraits'
 import ImageCarousel from './Carousel'
-import '../stylesheets/App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,48 +10,61 @@ import {
 } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 
+import '../stylesheets/HomePage.css';
+import '../index.css';
+
 export default function HomePage() {
   return (
-  
     <div className="App"> 
     
       <Container fluid>
-        <Row  > 
-        
+        <Row> 
           <Col lg={2}  >
             <div className="menu" >
             <Fade bottom>
-              <h2>JXSHOOTER</h2>
+              <h2 className="logo">jxshooter</h2>
               </Fade>
               <Fade bottom>
               <div>
-                <Link to="/portrait"><h2>Portrait</h2></Link>
-                <Link to="/landscape"><h2>Landscape</h2></Link>
-                <Link to="/street"><h2>Street</h2></Link>
+                <table>
+                  <tr><Link to="/portrait">
+                    <td className="num-col">01</td>
+                    <td><h6>PORTRAIT</h6></td>
+                  </Link></tr>
+                  <tr><Link to="/landscape">
+                    <td className="num-col" >02</td>
+                    <td><h6>LANDSCAPE</h6></td>
+                  </Link></tr>
+                  <tr><Link to="/street">
+                    <td className="num-col">03</td>
+                    <td><h6>STREET</h6></td>
+                  </Link></tr>
+                </table>
               </div>
               </Fade>
              
-              <Fade bottom><h2>About Me</h2></Fade>
+              <Fade bottom>
+                <h6>About Me &nbsp;&#10230;</h6>
+              {/* <svg width="100" height="100">
+                <circle cx="50" cy="50" r="42" stroke="white" stroke-width="2" fill="black"/>
+                <text x="43%" y="50%" text-anchor="middle" stroke="white" fill="white" stroke-width="0.8px" font-size="15px" dy="-5px">About</text>
+                <text x="45%" y="50%" text-anchor="middle" stroke="white" fill="white" stroke-width="1px" font-size="15px" dy="15px">Me&nbsp;&nbsp;&#8594;</text>
+              </svg>  */}
+              </Fade>
               
             </div>
           </Col>
           
-          <Col lg={8}>
-            <div style={{ display:"flex", flexDirection:'column', justifyContent:'center', height:'90vh', padding:'10%'}}>
+          <Col lg={8} className="carousel-col">
+            <div className="carousel-container">
               <ImageCarousel/>
+             
             </div>
-            
+            <p className="copyright">&#169;&nbsp;JXSHOOTER</p>
+            <p className="category-title">PORTRAITS PLACEHOLDER TEXT</p>
           </Col>
-          <Col lg={2}>
-          <div className="menu" >
-              <h2>JXSHOOTER</h2>
-              <div>
-                <h2>People</h2>
-                <h2>People</h2>
-                <h2>People</h2>
-              </div>
-              <h2>About Me</h2>
-            </div>
+          <Col className="last-col" lg={2}>
+            <h6 className="contact">Contact for Collaboration &nbsp;+</h6>
           </Col>
         </Row>
       </Container>

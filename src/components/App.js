@@ -3,6 +3,7 @@ import Menu from './Menu.js'
 import Portraits from './Portraits'
 import ImageCarousel from './Carousel'
 import '../stylesheets/App.css';
+
 import {
   BrowserRouter as Router,
   Switch,

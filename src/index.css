@@ -1,20 +1,41 @@
 :root {
   --main-bg-color: black;
   --main-font-color: white;
+  --second-font-color: #bdbdbd;
 }
 
 @font-face { 
-  font-family: gothic-md; 
-  src: url('./fonts/GothicA1-Medium.ttf'); 
+  font-family: p-black; 
+  src: url('./fonts/Poppins-Black.ttf') 
 }
 
 @font-face { 
-  font-family: gothic-light; 
-  src: url('./fonts/GothicA1-Light.ttf'); 
+  font-family: p-bold; 
+  src: url('./fonts/Poppins-Bold.ttf') 
+}
+
+@font-face { 
+  font-family: p-semibold; 
+  src: url('./fonts/Poppins-SemiBold.ttf') 
+}
+
+@font-face { 
+  font-family: p-medium; 
+  src: url('./fonts/Poppins-Medium.ttf') 
+} 
+
+@font-face { 
+  font-family: p-regular; 
+  src: url('./fonts/Poppins-Regular.ttf') 
+} 
+
+@font-face { 
+  font-family: p-light; 
+  src: url('./fonts/Poppins-Light.ttf') 
 }
 
 #root {
-  font-family: gothic-light;
+  font-family: p-regular;
   color: var(--main-font-color);
   background-color: var(--main-bg-color);
   -webkit-font-smoothing: antialiased;
@@ -23,3 +44,18 @@
   height: 100vh;
   overflow:'hidden'
 }
+
+a {
+  color: white !important;
+  text-decoration: none !important ;
+}
+
+a:hover {
+  color: var(--second-font-color) !important;
+  text-decoration: none !important;
+}
+
+.container, .container-fluid, .row {
+  height: 100%;
+}
+
