@@ -24,7 +24,7 @@ export default function HomePage() {
             <Fade bottom>
               <h2 className="logo">jxshooter</h2>
               </Fade>
-              <Fade bottom>
+              <Fade bottom cascade> 
               <div>
                 <table>
                   <tr><Link to="/portrait">

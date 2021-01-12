@@ -3,8 +3,8 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    position: relative;
+    height: 93vh;
+    position: fixed;
     /* border: 1px solid white; */
 }
 
@@ -72,4 +72,11 @@ td > h6 {
 
 .contact {
     margin-left: 50px;
+}
+.page-title {
+    height:25vh;
+    margin-top:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
