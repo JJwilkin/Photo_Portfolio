@@ -9,6 +9,8 @@ import HomePage from "./HomePage.js";
 import Street from "./Street.js";
 import Landscape from "./Landscape.js";
 import ScrollToTop from "./ScrollToTop";
+import About from './About';
+import Contact from './Contact'
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <Portraits />
         </Route>
         <Route exact path="/portrait">
           <Portraits />
@@ -26,6 +28,12 @@ function App() {
         </Route>
         <Route exact path="/street">
           <Street />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
       </Switch>
     </Router>

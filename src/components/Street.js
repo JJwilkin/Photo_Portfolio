@@ -6,6 +6,10 @@ import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import PageTitleDescription from './PageTitleDescription'
+import RightMenu from "./RightMenu"
+import SingleImage from "./SingleImage";
+import TwoImages from "./TwoImages";
 
 export default function Street() {
   return (
@@ -13,109 +17,62 @@ export default function Street() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu />
+            <Menu selectedOption="street"/>
           </Col>
 
-          <Col lg={11}>
+          <Col lg={10}>
             <Row>
-              <Col
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                }}
-                lg={12}
-              >
-                <Row className="page-title">
-                  <Col></Col>
-
-                  <Col lg={5}>
-                    <h1 className="left-align">Street</h1>
-                  </Col>
-                  <Col></Col>
-                </Row>
-                <Fade bottom cascade>
-                  <Row className="picture-spacing">
-                    <Col></Col>
-
-                    <Col lg={10}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                    <Col></Col>
-                  </Row>
-                </Fade>
-                <Fade bottom cascade>
-                  <Row className="picture-spacing">
-                    <Col></Col>
-                    <Col lg={6}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                    <Col></Col>
-                    <Col lg={5}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                  </Row>
-                </Fade>
-                <Fade bottom cascade>
-                  <Row className="picture-spacing">
-                    <Col></Col>
-                    <Col lg={4}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/toronto.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                    <Col></Col>
-                    <Col lg={6}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                  </Row>
-                </Fade>
-
-                <Fade bottom cascade>
-                  <Row className="picture-spacing">
-                    <Col lg={8}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                    <Col></Col>
-                  </Row>
-                </Fade>
-
-                <Fade bottom cascade>
-                  <Row className="picture-spacing">
-                    <Col></Col>
-                    <Col lg={9}>
-                      <img
-                        className="d-block w-100"
-                        src="./assets/rock.jpg"
-                        alt="First slide"
-                      />
-                    </Col>
-                  </Row>
-                </Fade>
+              <Col className="main-content" lg={12}>
+              <PageTitleDescription
+                  title="Street"
+                  description="Landscape photography shows spaces within the world,
+                      sometimes vast and unending, but other times microscopic."
+                />
+                <SingleImage
+                  image="./assets/rock.jpg"
+                  dimensions={[1, 10, 1]}
+                  position={1}
+                />
+                <TwoImages
+                  images={["./assets/rock.jpg", "./assets/toronto.jpg"]}
+                  dimensions={[1, 5, 1, 5]}
+                  positions={[1, 3]}
+                />
+                <TwoImages
+                  images={["./assets/toronto.jpg", "./assets/rock.jpg"]}
+                  dimensions={[1, 4, 6, 1]}
+                  positions={[1, 2]}
+                />
+                <SingleImage
+                  image="./assets/rock.jpg"
+                  dimensions={[1, 3, 8]}
+                  position={2}
+                />
+                <SingleImage
+                  image="./assets/rock.jpg"
+                  dimensions={[1, 8, 3]}
+                  position={1}
+                />
+                <SingleImage
+                  image="./assets/rock.jpg"
+                  dimensions={[1, 2, 9]}
+                  position={2}
+                />
+                <SingleImage
+                  image="./assets/rock.jpg"
+                  dimensions={[1, 8, 3]}
+                  position={1}
+                />
+                <TwoImages
+                  images={["./assets/rock.jpg", "./assets/toronto.jpg"]}
+                  dimensions={[1, 7, 1, 3]}
+                  positions={[1, 3]}
+                />
               </Col>
             </Row>
+          </Col>
+          <Col lg={1}>
+            <RightMenu selectedOption="landscape"/>
           </Col>
         </Row>
       </Container>

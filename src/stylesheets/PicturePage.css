@@ -1,7 +1,26 @@
-.left-align{
-    text-align: left;
+.text-align{
+    text-align: right;
+    
+}
+.p-style {
+    font-weight: lighter;
+    font-size: 14px;
+}
+.picture-spacing{
+    margin-bottom: 20%;
 }
 
-.picture-spacing{
-    margin-bottom: 25%;
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page-title {
+    height:25vh;
+    margin-top:3vh;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
