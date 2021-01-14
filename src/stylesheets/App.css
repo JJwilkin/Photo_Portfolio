@@ -3,23 +3,9 @@
   width: 100%;
   overflow: hidden;
   padding: 25px;
-  /* display: flex; */
+  display: flex;
 }
 
 .row {
   display: flex;
-}
-
-.col, .col-8, .col-lg-8{
-  /* border: 1px solid white; */
-  height: 100px;
-  width: 100px;
-}
-
-.menu{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height:90vh;
-  /* border: 1px solid white; */
 }
