@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/about.css";
@@ -8,10 +8,34 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import Menu from "./Menu";
 import RightMenu from "./RightMenu";
-
+import Lottie from "react-lottie";
+import animationData from "./loading2.json";
+import cacheImages from '../services/cacheImages'
 
 export default function About() {
+  const [isLoading, setIsLoading] = useState(true);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
+  useEffect(() => {
+    const imgs = [
+      "./assets/joshua4.jpg",
+      "./assets/toronto.jpg",
+      "./assets/rock.jpg",
+      "./assets/james1.jpg",
+      "./assets/james2.jpg",
+      "./assets/james3.jpg",
+      "./assets/james4.jpg",
+      "./assets/toronto2.jpg",
+    ]
+    cacheImages(imgs, setIsLoading);
+  }, []);
   return (
     <div className="App ">
       <Container fluid>
@@ -30,8 +54,7 @@ export default function About() {
                 }}
                 lg={12}
               >
-            
-                <Fade>
+{isLoading ? <Lottie options={defaultOptions} height={400} width={400} /> : <Fade>
                   <Row>
                     <Col></Col>
 
@@ -51,22 +74,22 @@ export default function About() {
                         sometimes vast and unending, but other times
                         microscopic. Landscape photography shows spaces within
                         the world, sometimes vast and unending, but other times
-                        microscopic. 
+                        microscopic.
                       </p>
                       <p className="left-align">
                         Landscape photography shows spaces within the world,
                         sometimes vast and unending, but other times
                         microscopic. Landscape photography shows spaces within
                         the world, sometimes vast and unending, but other times
-                        microscopic. 
+                        microscopic.
                       </p>
                         </Fade>
-                    
-                     
+
                     </Col>
                     <Col></Col>
                   </Row>
-                </Fade>
+                </Fade>}
+                
               </Col>
             </Row>
           </Col>
