@@ -27,7 +27,7 @@ export default function About() {
     const imgs = [
       "./assets/joshua4.jpg",
       "./assets/toronto.jpg",
-      "./assets/rock.jpg",
+      
       "./assets/james1.jpg",
       "./assets/james2.jpg",
       "./assets/james3.jpg",
