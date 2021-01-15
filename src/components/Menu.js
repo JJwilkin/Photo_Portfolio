@@ -19,7 +19,7 @@ export default function Menu(props) {
             <Link to="/">
               <td
                 className={`num-col ${
-                  selectedOption == "portrait" ? "active-link" : ""
+                  selectedOption == "portrait" ? "active-link" : "dim-text"
                 }`}
               >
                 01
@@ -27,7 +27,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "portrait" ? "active-link" : ""
+                    selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
                   PORTRAIT
@@ -39,7 +39,7 @@ export default function Menu(props) {
             <Link to="/landscape">
               <td
                 className={`num-col ${
-                  selectedOption == "landscape" ? "active-link" : ""
+                  selectedOption == "landscape" ? "active-link" : "dim-text"
                 }`}
               >
                 02
@@ -47,7 +47,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "landscape" ? "active-link" : ""
+                    selectedOption == "landscape" ? "active-link" : "dim-text"
                   }`}
                 >
                   LANDSCAPE
@@ -59,7 +59,7 @@ export default function Menu(props) {
             <Link to="/street">
               <td
                 className={`num-col ${
-                  selectedOption == "street" ? "active-link" : ""
+                  selectedOption == "street" ? "active-link" : "dim-text"
                 }`}
               >
                 03
@@ -67,7 +67,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "street" ? "active-link" : ""
+                    selectedOption == "street" ? "active-link" : "dim-text"
                   }`}
                 >
                   STREET

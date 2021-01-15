@@ -21,7 +21,7 @@ export default function RightMenu(props) {
         
       </div>
       <Link to="/about">
-          <h6 className={`${selectedOption == "about" ? "active-link" : ""}`}>
+          <h6 className={`${selectedOption == "about" ? "active-link" : "dim-text"}`}>
             About Me &nbsp;&#10230;
           </h6>
         </Link>
