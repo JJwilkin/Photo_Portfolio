@@ -80,7 +80,10 @@ export default function Menu(props) {
 
       <div>
       <Link to="/contact">
-        <svg width="90" height="90">
+      <h6 className={`${selectedOption == "about" ? "active-link" : "dim-text"}`}>
+            Contact Me &nbsp;+
+          </h6>
+        {/* <svg width="90" height="90">
           <circle
             cx="45"
             cy="45 "
@@ -113,7 +116,7 @@ export default function Menu(props) {
           >
             Me
           </text>
-        </svg>
+        </svg> */}
       </Link>
       </div>
     </div>
