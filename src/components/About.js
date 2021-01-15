@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/about.css";
+import "../stylesheets/Menu.css";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -10,32 +11,17 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import Lottie from "react-lottie";
 import animationData from "./loading2.json";
-import cacheImages from "../services/cacheImages";
+import LoadingAnimation from "./LoadingAnimation";
 
 export default function About() {
-  const [isLoading, setIsLoading] = useState(false);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+  const imageLoaded = () => {
+    counter.current += 1;
+    if (counter.current >= 1) {
+      setTimeout(() => setLoading(false), 2100);
+    }
   };
-
-  // useEffect(() => {
-  //   const imgs = [
-  //     "./assets/joshua4.jpg",
-  //     "./assets/toronto.jpg",
-
-  //     "./assets/james1.jpg",
-  //     "./assets/james2.jpg",
-  //     "./assets/james3.jpg",
-  //     "./assets/james4.jpg",
-  //     "./assets/toronto2.jpg",
-  //   ];
-  //   cacheImages(imgs, setIsLoading);
-  // }, []);
   return (
     <div className="App ">
       <Container fluid>
@@ -50,10 +36,18 @@ export default function About() {
                 className="center-content"
                 lg={12}
               >
-                {isLoading ? (
-                  <Lottie options={defaultOptions} height={400} width={400} />
-                ) : (
+                
+                <Fade opposite>
+                  <div
+                    style={{ display: loading ? "flex" : "none" }}
+                    className="max-height center-content"
+                  >
+                    <LoadingAnimation />
+                  </div>
+                </Fade>
+                
                   <Fade>
+                  <div style={{ display: loading ? "none" : "block" }}>
                     <Row>
                       <Col></Col>
 
@@ -62,11 +56,12 @@ export default function About() {
                           className="d-block w-100"
                           src="./assets/joshua4.jpg"
                           alt="First slide"
+                          onLoad={imageLoaded}
                         />
                       </Col>
                       <Col lg={5}>
                         <Fade bottom>
-                          <h1 className="left-align">About</h1>
+                          <p className="left-align">About</p>
                           <h3 className="left-align">I'm Josh</h3>
                           <p className="left-align">
                             Landscape photography shows spaces within the world,
@@ -86,13 +81,14 @@ export default function About() {
                       </Col>
                       <Col></Col>
                     </Row>
+                    </div>
                   </Fade>
-                )}
+              
               </Col>
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <RightMenu selectedOption="about" />
           </Col>
         </Row>
       </Container>

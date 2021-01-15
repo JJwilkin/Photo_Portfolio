@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
@@ -12,14 +12,13 @@ import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
-export default function Portraits(props) {
-  const { firstLoad, setFirstLoad } = props;
+export default function Portraits() {
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 5) {
-      setTimeout(() => setLoading(false), 2500);
+      setTimeout(() => setLoading(false), 2100);
     }
   };
 
@@ -54,21 +53,18 @@ export default function Portraits(props) {
                     dimensions={[1, 10, 1]}
                     position={1}
                     onLoad={imageLoaded}
-                    
                   />
                   <TwoImages
                     images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
                     dimensions={[1, 5, 1, 5]}
                     positions={[1, 3]}
                     onLoad={imageLoaded}
-                   
                   />
                   <TwoImages
                     images={["./assets/toronto.jpg", "./assets/james.jpg"]}
                     dimensions={[1, 4, 6, 1]}
                     positions={[1, 2]}
                     onLoad={imageLoaded}
-                    
                   />
                   {/* <SingleImage
                     image="./assets/rock.jpg"

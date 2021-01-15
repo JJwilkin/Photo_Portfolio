@@ -9,14 +9,14 @@ export default function Menu(props) {
   const selectedOption = props.selectedOption;
   return (
     <div className="menu">
-      <Link to="/portrait">
+      <Link to="/">
         <h2 className="logo">jxshooter</h2>
       </Link>
 
       <div>
         <table>
           <tr>
-            <Link to="/portrait">
+            <Link to="/">
               <td
                 className={`num-col ${
                   selectedOption == "portrait" ? "active-link" : ""

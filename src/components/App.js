@@ -21,9 +21,6 @@ function App() {
         <Route exact path="/">
           <Portraits />
         </Route>
-        <Route exact path="/portrait">
-          <Portraits />
-        </Route>
         <Route exact path="/landscape">
           <Landscape />
         </Route>

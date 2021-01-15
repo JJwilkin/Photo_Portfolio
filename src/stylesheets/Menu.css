@@ -3,9 +3,9 @@
 }
 
 .active-link {
-    font-weight: 800;
-    /* text-decoration: underline; */
-    color:rgb(241, 185, 30)
+    font-weight: 900;
+    text-decoration: underline;
+    color:rgb(255, 255, 255)
 }
 .tr-underline {
     border-bottom: 1px solid white;
