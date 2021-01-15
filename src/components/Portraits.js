@@ -17,8 +17,8 @@ export default function Portraits() {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 5) {
-      setTimeout(() => setLoading(false), 2100);
+    if (counter.current >= 7) {
+      setTimeout(() => setLoading(true), 2100);
     }
   };
 
@@ -66,7 +66,7 @@ export default function Portraits() {
                     positions={[1, 2]}
                     onLoad={imageLoaded}
                   />
-                  {/* <SingleImage
+                  <SingleImage
                     image="./assets/toronto2.jpg"
                     dimensions={[1, 5, 6]}
                     position={2}
@@ -79,7 +79,7 @@ export default function Portraits() {
                     position={1}
                     onLoad={imageLoaded}
                     
-                  /> */}
+                  />
                   {/* <SingleImage
                     image="./assets/rock.jpg"
                     dimensions={[1, 2, 9]}
