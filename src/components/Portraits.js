@@ -12,8 +12,9 @@ import TwoImages from "./TwoImages";
 import cacheImages from "../services/cacheImages";
 import animationData from "./loading2.json";
 import Lottie from "react-lottie";
-export default function Portraits() {
-  const [isLoading, setIsLoading] = useState(true);
+export default function Portraits(props) {
+  const {firstLoad, setFirstLoad} = props;
+  // const [isLoading, setIsLoading] = useState(true);
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -23,17 +24,16 @@ export default function Portraits() {
     },
   };
   useEffect(() => {
-    const imgs = [
-      "./assets/joshua4.jpg",
-      "./assets/toronto.jpg",
-
-      "./assets/james1.jpg",
-      "./assets/james2.jpg",
-      "./assets/james3.jpg",
-      "./assets/james4.jpg",
-      "./assets/toronto2.jpg",
-    ];
-    cacheImages(imgs, setIsLoading);
+    if(firstLoad){
+      const imgs = [
+        "./assets/joshua4.jpg",
+        "./assets/james3.jpg",
+        "./assets/rock.jpg",
+        "./assets/toronto.jpg",
+      ];
+      cacheImages(imgs, setFirstLoad);
+    }
+    
   }, []);
   return (
     <div className="App">
@@ -46,7 +46,7 @@ export default function Portraits() {
           <Col lg={10}>
             <Row>
               <Col className="main-content" lg={12}>
-                {isLoading ? (<div className="max-height center-content">
+                {firstLoad ? (<div className="max-height center-content">
                   <Lottie options={defaultOptions} height={400} width={400} />
                 </div>
                   

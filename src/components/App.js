@@ -9,16 +9,18 @@ import HomePage from "./HomePage.js";
 import Street from "./Street.js";
 import Landscape from "./Landscape.js";
 import ScrollToTop from "./ScrollToTop";
-import About from './About';
-import Contact from './Contact'
+import About from "./About";
+import Contact from "./Contact";
+import { useState } from "react";
 
 function App() {
+  const [firstLoad, setFirstLoad] = useState(true);
   return (
     <Router>
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <Portraits />
+          <Portraits firstLoad={firstLoad} setFirstLoad={setFirstLoad} />
         </Route>
         <Route exact path="/portrait">
           <Portraits />

@@ -13,7 +13,7 @@ import animationData from "./loading2.json";
 import cacheImages from "../services/cacheImages";
 
 export default function About() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -23,19 +23,19 @@ export default function About() {
     },
   };
 
-  useEffect(() => {
-    const imgs = [
-      "./assets/joshua4.jpg",
-      "./assets/toronto.jpg",
+  // useEffect(() => {
+  //   const imgs = [
+  //     "./assets/joshua4.jpg",
+  //     "./assets/toronto.jpg",
 
-      "./assets/james1.jpg",
-      "./assets/james2.jpg",
-      "./assets/james3.jpg",
-      "./assets/james4.jpg",
-      "./assets/toronto2.jpg",
-    ];
-    cacheImages(imgs, setIsLoading);
-  }, []);
+  //     "./assets/james1.jpg",
+  //     "./assets/james2.jpg",
+  //     "./assets/james3.jpg",
+  //     "./assets/james4.jpg",
+  //     "./assets/toronto2.jpg",
+  //   ];
+  //   cacheImages(imgs, setIsLoading);
+  // }, []);
   return (
     <div className="App ">
       <Container fluid>
