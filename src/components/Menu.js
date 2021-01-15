@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/Menu.css";
-import { InstagramOutlined } from "@ant-design/icons";
+
 
 export default function Menu(props) {
   const selectedOption = props.selectedOption;
@@ -12,7 +12,7 @@ export default function Menu(props) {
       <Link to="/">
         <h2 className="logo">jxshooter</h2>
       </Link>
-
+      
       <div>
         <table>
           <tr>

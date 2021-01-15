@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
@@ -14,6 +14,7 @@ import LoadingAnimation from "./LoadingAnimation";
 import Fade from "react-reveal/Fade";
 export default function Portraits() {
   const [loading, setLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
@@ -22,12 +23,17 @@ export default function Portraits() {
     }
   };
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <div className="App">
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="portrait" />
+            <div style={{ display: isMounted ? "block" : "none" }}>
+              <Menu selectedOption="portrait" />
+            </div>
           </Col>
 
           <Col lg={10}>
@@ -71,14 +77,12 @@ export default function Portraits() {
                     dimensions={[1, 5, 6]}
                     position={2}
                     onLoad={imageLoaded}
-                    
                   />
                   <SingleImage
                     image="./assets/james3.jpg"
                     dimensions={[1, 5, 6]}
                     position={1}
                     onLoad={imageLoaded}
-                    
                   />
                   {/* <SingleImage
                     image="./assets/rock.jpg"
@@ -103,7 +107,9 @@ export default function Portraits() {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <div style={{ display: isMounted ? "block" : "none" }}>
+              <RightMenu selectedOption="landscape" />
+            </div>
           </Col>
         </Row>
       </Container>
