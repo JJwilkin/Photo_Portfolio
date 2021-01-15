@@ -17,7 +17,7 @@ export default function Portraits() {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 5) {
+    if (counter.current >= 7) {
       setTimeout(() => setLoading(false), 2100);
     }
   };
@@ -66,35 +66,37 @@ export default function Portraits() {
                     positions={[1, 2]}
                     onLoad={imageLoaded}
                   />
-                  {/* <SingleImage
-                    image="./assets/rock.jpg"
+                  <SingleImage
+                    image="./assets/toronto2.jpg"
                     dimensions={[1, 3, 8]}
                     position={2}
-                    style={{ display: loading ? "none" : "block" }}
+                    onLoad={imageLoaded}
+                    
                   />
                   <SingleImage
-                    image="./assets/rock.jpg"
+                    image="./assets/james3.jpg"
                     dimensions={[1, 8, 3]}
                     position={1}
-                    style={{ display: loading ? "none" : "block" }}
+                    onLoad={imageLoaded}
+                    
                   />
-                  <SingleImage
+                  {/* <SingleImage
                     image="./assets/rock.jpg"
                     dimensions={[1, 2, 9]}
                     position={2}
-                    style={{ display: loading ? "none" : "block" }}
+                   
                   />
                   <SingleImage
                     image="./assets/rock.jpg"
                     dimensions={[1, 8, 3]}
                     position={1}
-                    style={{ display: loading ? "none" : "block" }}
+                   
                   />
                   <TwoImages
                     images={["./assets/rock.jpg", "./assets/toronto.jpg"]}
                     dimensions={[1, 7, 1, 3]}
                     positions={[1, 3]}
-                    style={{ display: loading ? "none" : "block" }}
+                    
                   /> */}
                 </div>
               </Col>
