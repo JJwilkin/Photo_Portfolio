@@ -28,12 +28,15 @@ export default function Portraits() {
   }, []);
   return (
     <div className="App">
+      {
+        isMounted ? 
+      
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <div style={{ display: isMounted ? "block" : "none" }}>
+            
               <Menu selectedOption="portrait" />
-            </div>
+            
           </Col>
 
           <Col lg={10}>
@@ -107,12 +110,14 @@ export default function Portraits() {
             </Row>
           </Col>
           <Col lg={1}>
-            <div style={{ display: isMounted ? "block" : "none" }}>
+            
               <RightMenu selectedOption="landscape" />
-            </div>
+            
           </Col>
         </Row>
       </Container>
+      : null
+      }
     </div>
   );
 }
