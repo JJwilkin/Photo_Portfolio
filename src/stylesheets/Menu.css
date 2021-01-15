@@ -25,6 +25,9 @@
 
 }
 
+.margin-right {
+    margin-right:20px;
+}
 .right-menu {
     display:flex;
     flex-direction: column;
