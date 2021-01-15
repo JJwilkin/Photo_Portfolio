@@ -18,7 +18,7 @@ export default function Portraits() {
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 7) {
-      setTimeout(() => setLoading(true), 2100);
+      setTimeout(() => setLoading(false), 2100);
     }
   };
 
