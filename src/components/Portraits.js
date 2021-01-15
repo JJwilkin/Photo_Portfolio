@@ -68,14 +68,14 @@ export default function Portraits() {
                   />
                   <SingleImage
                     image="./assets/toronto2.jpg"
-                    dimensions={[1, 3, 8]}
+                    dimensions={[1, 5, 6]}
                     position={2}
                     onLoad={imageLoaded}
                     
                   />
                   <SingleImage
                     image="./assets/james3.jpg"
-                    dimensions={[1, 8, 3]}
+                    dimensions={[1, 5, 6]}
                     position={1}
                     onLoad={imageLoaded}
                     
