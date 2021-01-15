@@ -9,40 +9,20 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
-import cacheImages from "../services/cacheImages";
-import animationData from "./loading2.json";
-import Lottie from "react-lottie";
+import LoadingAnimation from "./LoadingAnimation";
+
+import Fade from "react-reveal/Fade";
 export default function Portraits(props) {
   const { firstLoad, setFirstLoad } = props;
-  // const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 5) {
-      setTimeout(()=> setLoading(false), 3500)
-      
+      setTimeout(() => setLoading(false), 2500);
     }
   };
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  useEffect(() => {
-    if (firstLoad) {
-      const imgs = [
-        "./assets/joshua4.jpg",
-        "./assets/james3.jpg",
-        "./assets/rock.jpg",
-        "./assets/toronto.jpg",
-      ];
-      cacheImages(imgs, setFirstLoad);
-    }
-  }, []);
+
   return (
     <div className="App">
       <Container fluid>
@@ -54,40 +34,41 @@ export default function Portraits(props) {
           <Col lg={10}>
             <Row>
               <Col className="main-content" lg={12}>
-                <div
-                  style={{ display: loading ? "flex" : "none" }}
-                  className="max-height center-content"
-                >
-                  <Lottie options={defaultOptions} height={400} width={400} />
-                </div>
-
-                <div >
+                <Fade opposite>
+                  <div
+                    style={{ display: loading ? "flex" : "none" }}
+                    className="max-height center-content"
+                  >
+                    <LoadingAnimation />
+                  </div>
+                </Fade>
+                <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
                     title="Portrait"
                     description="Landscape photography shows spaces within the world,
                       sometimes vast and unending, but other times microscopic."
-                      style={{ display: loading ? "none" : "block" }}
+                    style={{ display: loading ? "none" : "block" }}
                   />
                   <SingleImage
                     image="./assets/stu.jpg"
                     dimensions={[1, 10, 1]}
                     position={1}
                     onLoad={imageLoaded}
-                    style={{ display: loading ? "none" : "block" }}
+                    
                   />
                   <TwoImages
                     images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
                     dimensions={[1, 5, 1, 5]}
                     positions={[1, 3]}
                     onLoad={imageLoaded}
-                    style={{ display: loading ? "none" : "block" }}
+                   
                   />
                   <TwoImages
                     images={["./assets/toronto.jpg", "./assets/james.jpg"]}
                     dimensions={[1, 4, 6, 1]}
                     positions={[1, 2]}
                     onLoad={imageLoaded}
-                    style={{ display: loading ? "none" : "block" }}
+                    
                   />
                   {/* <SingleImage
                     image="./assets/rock.jpg"
