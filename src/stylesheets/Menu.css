@@ -3,9 +3,13 @@
 }
 
 .active-link {
-    font-weight: 800;
+    font-weight: 900;
     /* text-decoration: underline; */
-    color:rgb(241, 185, 30)
+    color:rgb(255, 255, 255)
+}
+.dim-text {
+    font-weight: 100;
+    color:rgba(255, 255, 255, 0.801);
 }
 .tr-underline {
     border-bottom: 1px solid white;
@@ -21,6 +25,9 @@
 
 }
 
+.margin-right {
+    margin-right:20px;
+}
 .right-menu {
     display:flex;
     flex-direction: column;

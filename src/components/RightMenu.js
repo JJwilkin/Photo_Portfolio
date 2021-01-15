@@ -9,23 +9,24 @@ export default function RightMenu(props) {
   const selectedOption = props.selectedOption;
   return (
     <div className="right-menu">
-      <div>
-    
-      <a target="_blank" href="https://instagram.com/jxshooter/">
+      <div className="margin-right">
+        <a target="_blank" href="https://instagram.com/jxshooter/">
           <InstagramOutlined style={{ fontSize: 30 }} />
         </a>
       </div>
 
-      
-      <div>
-        
-      </div>
-      <Link to="/about">
-          <h6 className={`${selectedOption == "about" ? "active-link" : ""}`}>
+      <div></div>
+      <div className="margin-right">
+        <Link to="/about">
+          <h6
+            className={`${
+              selectedOption == "about" ? "active-link" : "dim-text"
+            }`}
+          >
             About Me &nbsp;&#10230;
           </h6>
         </Link>
-      
+      </div>
     </div>
   );
 }

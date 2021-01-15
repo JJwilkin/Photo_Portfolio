@@ -5,10 +5,10 @@ import "../stylesheets/PicturePage.css";
 import "../stylesheets/HomePage.css";
 
 export default function SingleImage(props) {
-  let { image, dimensions, position } = props;
+  let { image, dimensions, position, onLoad } = props;
   let imagePosition = [null, null, null];
   imagePosition[position] = (
-    <img className="d-block w-100" src={image} alt="First slide" />
+    <img className="d-block w-100" onLoad={onLoad} src={image} alt="First slide" />
   );
 
   return (

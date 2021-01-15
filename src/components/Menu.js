@@ -3,23 +3,23 @@ import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/Menu.css";
-import { InstagramOutlined } from "@ant-design/icons";
+
 
 export default function Menu(props) {
   const selectedOption = props.selectedOption;
   return (
     <div className="menu">
-      <Link to="/portrait">
+      <Link to="/">
         <h2 className="logo">jxshooter</h2>
       </Link>
-
+      
       <div>
         <table>
           <tr>
-            <Link to="/portrait">
+            <Link to="/">
               <td
                 className={`num-col ${
-                  selectedOption == "portrait" ? "active-link" : ""
+                  selectedOption == "portrait" ? "active-link" : "dim-text"
                 }`}
               >
                 01
@@ -27,7 +27,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "portrait" ? "active-link" : ""
+                    selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
                   PORTRAIT
@@ -39,7 +39,7 @@ export default function Menu(props) {
             <Link to="/landscape">
               <td
                 className={`num-col ${
-                  selectedOption == "landscape" ? "active-link" : ""
+                  selectedOption == "landscape" ? "active-link" : "dim-text"
                 }`}
               >
                 02
@@ -47,7 +47,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "landscape" ? "active-link" : ""
+                    selectedOption == "landscape" ? "active-link" : "dim-text"
                   }`}
                 >
                   LANDSCAPE
@@ -59,7 +59,7 @@ export default function Menu(props) {
             <Link to="/street">
               <td
                 className={`num-col ${
-                  selectedOption == "street" ? "active-link" : ""
+                  selectedOption == "street" ? "active-link" : "dim-text"
                 }`}
               >
                 03
@@ -67,7 +67,7 @@ export default function Menu(props) {
               <td>
                 <h6
                   className={`${
-                    selectedOption == "street" ? "active-link" : ""
+                    selectedOption == "street" ? "active-link" : "dim-text"
                   }`}
                 >
                   STREET
@@ -80,7 +80,10 @@ export default function Menu(props) {
 
       <div>
       <Link to="/contact">
-        <svg width="90" height="90">
+      <h6 className={`${selectedOption == "about" ? "active-link" : "dim-text"}`}>
+            Contact Me &nbsp;+
+          </h6>
+        {/* <svg width="90" height="90">
           <circle
             cx="45"
             cy="45 "
@@ -113,7 +116,7 @@ export default function Menu(props) {
           >
             Me
           </text>
-        </svg>
+        </svg> */}
       </Link>
       </div>
     </div>

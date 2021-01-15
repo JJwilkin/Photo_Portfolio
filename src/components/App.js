@@ -9,8 +9,9 @@ import HomePage from "./HomePage.js";
 import Street from "./Street.js";
 import Landscape from "./Landscape.js";
 import ScrollToTop from "./ScrollToTop";
-import About from './About';
-import Contact from './Contact'
+import About from "./About";
+import Contact from "./Contact";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
@@ -18,9 +19,6 @@ function App() {
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <Portraits />
-        </Route>
-        <Route exact path="/portrait">
           <Portraits />
         </Route>
         <Route exact path="/landscape">
