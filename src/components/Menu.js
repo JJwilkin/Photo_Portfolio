@@ -136,7 +136,8 @@ export default function Menu(props) {
             >
               Contact Me &nbsp;+
             </h6>
-            <Link
+            </Link>
+            {desktop ? null:  <Link
               to="/about"
               onClick={() => {
                 if (!desktop) {
@@ -152,8 +153,9 @@ export default function Menu(props) {
               >
                 About Me &nbsp;&#10230;
               </h6>
-            </Link>
-          </Link>
+            </Link>}
+            
+          
         </div>
       </Fade>
     </div>
