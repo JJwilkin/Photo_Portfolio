@@ -14,7 +14,7 @@ export default function Menu(props) {
   const [selectedOption, setOption] = useState(props.selectedOption);
 
   return (
-    <div className="menu">
+    <div style={desktop ? null: {height:'80vh'}} className="menu">
       <Fade when={showFade}>
         <Link to="/">
           <h2
