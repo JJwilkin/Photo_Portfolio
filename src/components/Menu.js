@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/Menu.css";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Menu(props) {
-  const { showFade, setShowFade } = props;
-  const selectedOption = props.selectedOption;
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowFade(true);
-  //   }, 1500);
-  // }, []);
+  const desktop = useMediaQuery("(min-width:1000px)");
+  const { showFade } = props;
+  const { setShowMenu } = props;
+  // let selectedOption = props.selectedOption;
+
+  const [selectedOption, setOption] = useState(props.selectedOption);
+
   return (
     <div className="menu">
       <Fade when={showFade}>
@@ -22,7 +23,15 @@ export default function Menu(props) {
         <div>
           <table>
             <tr>
-              <Link to="/">
+              <Link
+                to="/"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("portrait");
+                    setShowMenu(false);
+                  }
+                }}
+              >
                 <td
                   className={`num-col ${
                     selectedOption == "portrait" ? "active-link" : "dim-text"
@@ -42,7 +51,15 @@ export default function Menu(props) {
               </Link>
             </tr>
             <tr>
-              <Link to="/landscape">
+              <Link
+                to="/landscape"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("landscape");
+                    setShowMenu(false);
+                  }
+                }}
+              >
                 <td
                   className={`num-col ${
                     selectedOption == "landscape" ? "active-link" : "dim-text"
@@ -62,7 +79,15 @@ export default function Menu(props) {
               </Link>
             </tr>
             <tr>
-              <Link to="/street">
+              <Link
+                to="/street"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("street");
+                    setShowMenu(false);
+                  }
+                }}
+              >
                 <td
                   className={`num-col ${
                     selectedOption == "street" ? "active-link" : "dim-text"
@@ -85,48 +110,39 @@ export default function Menu(props) {
         </div>
 
         <div>
-          <Link to="/contact">
+          <Link
+            to="/contact"
+            onClick={() => {
+              if (!desktop) {
+                setOption("contact");
+                setShowMenu(false);
+              }
+            }}
+          >
             <h6
               className={`${
-                selectedOption == "about" ? "active-link" : "dim-text"
+                selectedOption == "contact" ? "active-link" : "dim-text"
               }`}
             >
               Contact Me &nbsp;+
             </h6>
-            {/* <svg width="90" height="90">
-          <circle
-            cx="45"
-            cy="45 "
-            r="42"
-            stroke="white"
-            stroke-width="2"
-            fill="black"
-          />
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            stroke="white"
-            fill="white"
-            stroke-width="0.8px"
-            font-size="12px"
-            dy="-5px"
-          >
-            Contact
-          </text>
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            stroke="white"
-            fill="white"
-            stroke-width="1px"
-            font-size="12px"
-            dy="15px"
-          >
-            Me
-          </text>
-        </svg> */}
+            <Link
+              to="/about"
+              onClick={() => {
+                if (!desktop) {
+                  setOption("about");
+                  setShowMenu(false);
+                }
+              }}
+            >
+              <h6
+                className={`${
+                  selectedOption == "about" ? "active-link" : "dim-text"
+                }`}
+              >
+                About Me &nbsp;&#10230;
+              </h6>
+            </Link>
           </Link>
         </div>
       </Fade>

@@ -12,8 +12,10 @@ import RightMenu from "./RightMenu";
 import Lottie from "react-lottie";
 import animationData from "./loading2.json";
 import LoadingAnimation from "./LoadingAnimation";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function About(props) {
+  const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
@@ -33,11 +35,13 @@ export default function About(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu
-              selectedOption="about"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+          {desktop ? (
+              <Menu
+                selectedOption="about"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>

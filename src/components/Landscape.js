@@ -10,9 +10,10 @@ import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Fade from "react-reveal/Fade";
 export default function Landscape(props) {
+  const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
@@ -33,11 +34,13 @@ export default function Landscape(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu
-              selectedOption="landscape"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+          {desktop ? (
+              <Menu
+                selectedOption="landscape"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>

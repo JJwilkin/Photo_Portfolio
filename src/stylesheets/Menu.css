@@ -36,3 +36,7 @@
     height: 93vh;
     position: fixed;
 }
+
+.page-header-menu{
+    display: flex;
+}

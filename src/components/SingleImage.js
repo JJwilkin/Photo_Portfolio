@@ -4,7 +4,9 @@ import { Row, Col } from "react-bootstrap";
 import "../stylesheets/PicturePage.css";
 import "../stylesheets/HomePage.css";
 
+
 export default function SingleImage(props) {
+
   let { image, dimensions, position, onLoad } = props;
   let imagePosition = [null, null, null];
   imagePosition[position] = (

@@ -10,10 +10,12 @@ import Fade from "react-reveal/Fade";
 import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import LoadingAnimation from "./LoadingAnimation";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Contact(props) {
   const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
+  const desktop = useMediaQuery("(min-width:1000px)");
 
   setTimeout(() => {
     setShowFade(true);
@@ -27,11 +29,13 @@ export default function Contact(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu
-              selectedOption="about"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+            {desktop ? (
+              <Menu
+                selectedOption="contact"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>
@@ -63,20 +67,20 @@ export default function Contact(props) {
                           <h1 className="right-align">Joshua Wilkinson</h1>
                           {/* <h3 className="left-align">Let's collaborate</h3> */}
                           <div>
-                            <p className="right-align small-margin">
+                            <p className="right-align small-margin small-text">
                               <b>Email</b> &nbsp;
                               <a
                                 target="_blank"
-                                href="mailto:joshjeffreywilkinson@gmail.com"
+                                href="mailto:jxshooter@outlook.com"
                               >
-                                joshjeffreywilkinson@gmail.com
+                                jxshooter@outlook.com
                               </a>
                             </p>
-                            <p className="right-align small-margin">
+                            <p className="right-align small-margin small-text">
                               <b>Phone</b> &nbsp;
                               <a href="tel:6472194678">+1 (647) 219 4678</a>
                             </p>
-                            <p className="right-align small-margin">
+                            <p className="right-align small-margin small-text">
                               <b>Instagram</b> &nbsp;
                               <a
                                 target="_blank"

@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "../stylesheets/Hamburger.css";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import PageTitleDescription from "./PageTitleDescription";
 import Menu from "./Menu";
 import RightMenu from "./RightMenu";
@@ -13,6 +14,7 @@ import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
 export default function Portraits(props) {
+  const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
@@ -28,16 +30,22 @@ export default function Portraits(props) {
     }
   };
 
+  function showSettings(event) {
+    event.preventDefault();
+  }
+
   return (
     <div className="App">
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu
-              selectedOption="portrait"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+            {desktop ? (
+              <Menu
+                selectedOption="portrait"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>
@@ -60,7 +68,7 @@ export default function Portraits(props) {
                   />
                   <SingleImage
                     image="./assets/stu.jpg"
-                    dimensions={[1, 10, 1]}
+                    dimensions={[2, 9, 1]}
                     position={1}
                     onLoad={imageLoaded}
                   />
