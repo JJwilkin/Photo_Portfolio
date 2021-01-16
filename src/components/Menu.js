@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import "../stylesheets/HomePage.css";
@@ -6,9 +6,13 @@ import "../stylesheets/Menu.css";
 
 
 export default function Menu(props) {
+  const {showFade, setShowFade} = props;
   const selectedOption = props.selectedOption;
+  useEffect(()=> {setShowFade(true)} , [])
   return (
     <div className="menu">
+      <Fade when={showFade}>
+     
       <Link to="/">
         <h2 className="logo">jxshooter</h2>
       </Link>
@@ -119,6 +123,8 @@ export default function Menu(props) {
         </svg> */}
       </Link>
       </div>
+         
+      </Fade>
     </div>
   );
 }

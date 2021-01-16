@@ -13,7 +13,8 @@ import Lottie from "react-lottie";
 import animationData from "./loading2.json";
 import LoadingAnimation from "./LoadingAnimation";
 
-export default function About() {
+export default function About(props) {
+  const {showFade, setShowFade} = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
@@ -27,7 +28,7 @@ export default function About() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="about" />
+            <Menu selectedOption="about" showFade={showFade} setShowFade={setShowFade}/>
           </Col>
 
           <Col lg={10}>

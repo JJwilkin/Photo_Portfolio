@@ -12,7 +12,8 @@ import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
-export default function Landscape() {
+export default function Landscape(props) {
+  const {showFade, setShowFade} = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
@@ -27,7 +28,7 @@ export default function Landscape() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="landscape" />
+            <Menu selectedOption="landscape"  showFade={showFade} setShowFade={setShowFade}/>
           </Col>
 
           <Col lg={10}>

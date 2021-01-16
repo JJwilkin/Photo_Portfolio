@@ -14,24 +14,26 @@ import Contact from "./Contact";
 import { useEffect, useState } from "react";
 
 function App() {
+  const [showFade, setShowFade] = useState(false);
+  useEffect(()=>{},[showFade])
   return (
     <Router>
       <ScrollToTop />
       <Switch>
         <Route exact path="/">
-          <Portraits />
+          <Portraits showFade={showFade} setShowFade={setShowFade}/>
         </Route>
         <Route exact path="/landscape">
-          <Landscape />
+          <Landscape showFade={showFade} setShowFade={setShowFade}/>
         </Route>
         <Route exact path="/street">
-          <Street />
+          <Street showFade={showFade} setShowFade={setShowFade}/>
         </Route>
         <Route exact path="/about">
-          <About />
+          <About showFade={showFade} setShowFade={setShowFade}/>
         </Route>
         <Route exact path="/contact">
-          <Contact />
+          <Contact showFade={showFade} setShowFade={setShowFade}/>
         </Route>
       </Switch>
     </Router>

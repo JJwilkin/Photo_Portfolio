@@ -12,7 +12,8 @@ import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
-export default function Portraits() {
+export default function Portraits(props) {
+  const {showFade, setShowFade} = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
@@ -27,7 +28,7 @@ export default function Portraits() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="portrait" />
+            <Menu selectedOption="portrait"  showFade={showFade} setShowFade={setShowFade}/>
           </Col>
 
           <Col lg={10}>

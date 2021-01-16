@@ -11,7 +11,8 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import LoadingAnimation from "./LoadingAnimation";
 
-export default function Contact() {
+export default function Contact(props) {
+  const {showFade, setShowFade} = props;
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => setLoading(false), 2100);
@@ -21,7 +22,7 @@ export default function Contact() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="about" />
+            <Menu selectedOption="about" showFade={showFade} setShowFade={setShowFade} />
           </Col>
 
           <Col lg={10}>

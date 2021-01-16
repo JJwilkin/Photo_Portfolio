@@ -12,7 +12,8 @@ import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 
-export default function Street() {
+export default function Street(props) {
+  const {showFade, setShowFade} = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
@@ -26,7 +27,7 @@ export default function Street() {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="street"/>
+            <Menu selectedOption="street" showFade={showFade} setShowFade={setShowFade}/>
           </Col>
 
           <Col lg={10}>
