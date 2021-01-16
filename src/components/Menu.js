@@ -17,7 +17,17 @@ export default function Menu(props) {
     <div className="menu">
       <Fade when={showFade}>
         <Link to="/">
-          <h2 className="logo">jxshooter</h2>
+          <h2
+            className="logo"
+            onClick={() => {
+              if (!desktop) {
+                setOption("portrait");
+                setShowMenu(false);
+              }
+            }}
+          >
+            jxshooter
+          </h2>
         </Link>
 
         <div>
