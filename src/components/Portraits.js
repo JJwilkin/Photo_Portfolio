@@ -13,13 +13,18 @@ import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
 export default function Portraits(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 7) {
-      setTimeout(() => setLoading(false), 2100);
+      setTimeout(() => {
+        setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+      }, 2100);
     }
   };
 
@@ -28,7 +33,11 @@ export default function Portraits(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="portrait"  showFade={showFade} setShowFade={setShowFade}/>
+            <Menu
+              selectedOption="portrait"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
 
           <Col lg={10}>
@@ -72,14 +81,12 @@ export default function Portraits(props) {
                     dimensions={[1, 5, 6]}
                     position={2}
                     onLoad={imageLoaded}
-                    
                   />
                   <SingleImage
                     image="./assets/james3.jpg"
                     dimensions={[1, 5, 6]}
                     position={1}
                     onLoad={imageLoaded}
-                    
                   />
                   {/* <SingleImage
                     image="./assets/rock.jpg"
@@ -104,7 +111,11 @@ export default function Portraits(props) {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <RightMenu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>

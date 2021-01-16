@@ -14,13 +14,18 @@ import animationData from "./loading2.json";
 import LoadingAnimation from "./LoadingAnimation";
 
 export default function About(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 1) {
-      setTimeout(() => setLoading(false), 2100);
+      setTimeout(() => {
+        setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+      }, 2100);
     }
   };
   return (
@@ -28,16 +33,16 @@ export default function About(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="about" showFade={showFade} setShowFade={setShowFade}/>
+            <Menu
+              selectedOption="about"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
 
           <Col lg={10}>
             <Row style={{ height: "100vh" }}>
-              <Col
-                className="center-content"
-                lg={12}
-              >
-                
+              <Col className="center-content" lg={12}>
                 <Fade opposite>
                   <div
                     style={{ display: loading ? "flex" : "none" }}
@@ -46,8 +51,8 @@ export default function About(props) {
                     <LoadingAnimation />
                   </div>
                 </Fade>
-                
-                  <Fade>
+
+                <Fade>
                   <div style={{ display: loading ? "none" : "block" }}>
                     <Row>
                       <Col></Col>
@@ -82,14 +87,17 @@ export default function About(props) {
                       </Col>
                       <Col></Col>
                     </Row>
-                    </div>
-                  </Fade>
-              
+                  </div>
+                </Fade>
               </Col>
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="about" />
+            <RightMenu
+              selectedOption="about"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>

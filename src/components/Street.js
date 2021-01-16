@@ -6,20 +6,25 @@ import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-import PageTitleDescription from './PageTitleDescription'
-import RightMenu from "./RightMenu"
+import PageTitleDescription from "./PageTitleDescription";
+import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 
 export default function Street(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 5) {
-      setTimeout(() => setLoading(false), 2100);
+      setTimeout(() => {
+        setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+      }, 2100);
     }
   };
   return (
@@ -27,7 +32,11 @@ export default function Street(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="street" showFade={showFade} setShowFade={setShowFade}/>
+            <Menu
+              selectedOption="street"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
 
           <Col lg={10}>
@@ -101,7 +110,11 @@ export default function Street(props) {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape"/>
+            <RightMenu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>

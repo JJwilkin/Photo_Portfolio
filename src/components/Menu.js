@@ -4,90 +4,96 @@ import { Link } from "react-router-dom";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/Menu.css";
 
-
 export default function Menu(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const selectedOption = props.selectedOption;
-  useEffect(()=> {setShowFade(true)} , [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowFade(true);
+  //   }, 1500);
+  // }, []);
   return (
     <div className="menu">
       <Fade when={showFade}>
-     
-      <Link to="/">
-        <h2 className="logo">jxshooter</h2>
-      </Link>
-      
-      <div>
-        <table>
-          <tr>
-            <Link to="/">
-              <td
-                className={`num-col ${
-                  selectedOption == "portrait" ? "active-link" : "dim-text"
-                }`}
-              >
-                01
-              </td>
-              <td>
-                <h6
-                  className={`${
+        <Link to="/">
+          <h2 className="logo">jxshooter</h2>
+        </Link>
+
+        <div>
+          <table>
+            <tr>
+              <Link to="/">
+                <td
+                  className={`num-col ${
                     selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
-                  PORTRAIT
-                </h6>
-              </td>
-            </Link>
-          </tr>
-          <tr>
-            <Link to="/landscape">
-              <td
-                className={`num-col ${
-                  selectedOption == "landscape" ? "active-link" : "dim-text"
-                }`}
-              >
-                02
-              </td>
-              <td>
-                <h6
-                  className={`${
+                  01
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "portrait" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    PORTRAIT
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link to="/landscape">
+                <td
+                  className={`num-col ${
                     selectedOption == "landscape" ? "active-link" : "dim-text"
                   }`}
                 >
-                  LANDSCAPE
-                </h6>
-              </td>
-            </Link>
-          </tr>
-          <tr>
-            <Link to="/street">
-              <td
-                className={`num-col ${
-                  selectedOption == "street" ? "active-link" : "dim-text"
-                }`}
-              >
-                03
-              </td>
-              <td>
-                <h6
-                  className={`${
+                  02
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "landscape" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    LANDSCAPE
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link to="/street">
+                <td
+                  className={`num-col ${
                     selectedOption == "street" ? "active-link" : "dim-text"
                   }`}
                 >
-                  STREET
-                </h6>
-              </td>
-            </Link>
-          </tr>
-        </table>
-      </div>
+                  03
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "street" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    STREET
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+          </table>
+        </div>
 
-      <div>
-      <Link to="/contact">
-      <h6 className={`${selectedOption == "about" ? "active-link" : "dim-text"}`}>
-            Contact Me &nbsp;+
-          </h6>
-        {/* <svg width="90" height="90">
+        <div>
+          <Link to="/contact">
+            <h6
+              className={`${
+                selectedOption == "about" ? "active-link" : "dim-text"
+              }`}
+            >
+              Contact Me &nbsp;+
+            </h6>
+            {/* <svg width="90" height="90">
           <circle
             cx="45"
             cy="45 "
@@ -121,9 +127,8 @@ export default function Menu(props) {
             Me
           </text>
         </svg> */}
-      </Link>
-      </div>
-         
+          </Link>
+        </div>
       </Fade>
     </div>
   );

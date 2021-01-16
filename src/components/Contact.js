@@ -12,17 +12,26 @@ import RightMenu from "./RightMenu";
 import LoadingAnimation from "./LoadingAnimation";
 
 export default function Contact(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
 
-  setTimeout(() => setLoading(false), 2100);
+  setTimeout(() => {
+    setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+  }, 2100);
 
   return (
     <div className="App ">
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="about" showFade={showFade} setShowFade={setShowFade} />
+            <Menu
+              selectedOption="about"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
 
           <Col lg={10}>
@@ -87,7 +96,11 @@ export default function Contact(props) {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <RightMenu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>

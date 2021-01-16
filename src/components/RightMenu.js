@@ -6,9 +6,11 @@ import "../stylesheets/Menu.css";
 import { InstagramOutlined } from "@ant-design/icons";
 
 export default function RightMenu(props) {
+  const { showFade, setShowFade } = props;
   const selectedOption = props.selectedOption;
   return (
     <div className="right-menu">
+      <Fade when={showFade}>
       <div className="margin-right">
         <a target="_blank" href="https://instagram.com/jxshooter/">
           <InstagramOutlined style={{ fontSize: 30 }} />
@@ -27,6 +29,7 @@ export default function RightMenu(props) {
           </h6>
         </Link>
       </div>
+      </Fade>
     </div>
   );
 }

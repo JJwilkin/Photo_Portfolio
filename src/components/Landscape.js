@@ -13,13 +13,18 @@ import LoadingAnimation from "./LoadingAnimation";
 
 import Fade from "react-reveal/Fade";
 export default function Landscape(props) {
-  const {showFade, setShowFade} = props;
+  const { showFade, setShowFade } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current >= 5) {
-      setTimeout(() => setLoading(false), 2100);
+      setTimeout(() => {
+        setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+      }, 2100);
     }
   };
 
@@ -28,7 +33,11 @@ export default function Landscape(props) {
       <Container fluid>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="landscape"  showFade={showFade} setShowFade={setShowFade}/>
+            <Menu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
 
           <Col lg={10}>
@@ -102,7 +111,11 @@ export default function Landscape(props) {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <RightMenu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>
