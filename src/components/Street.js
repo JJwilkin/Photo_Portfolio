@@ -60,7 +60,7 @@ export default function Street(props) {
           <Col lg={1}>
             {desktop ? (
               <Menu
-                selectedOption="portrait"
+                selectedOption="street"
                 showFade={showFade}
                 setShowFade={setShowFade}
               />
@@ -122,7 +122,7 @@ export default function Street(props) {
           </Col>
           <Col lg={1}>
             <RightMenu
-              selectedOption="landscape"
+              
               showFade={showFade}
               setShowFade={setShowFade}
             />

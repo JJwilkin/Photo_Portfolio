@@ -121,11 +121,7 @@ export default function Portraits(props) {
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu
-              selectedOption="landscape"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+            <RightMenu showFade={showFade} setShowFade={setShowFade} />
           </Col>
         </Row>
         <Row style={loading ? { display: "none" } : null}>

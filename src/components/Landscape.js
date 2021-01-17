@@ -37,7 +37,7 @@ export default function Landscape(props) {
   return (
     <div className="App">
       <Container fluid>
-        <Row style={!desktop && !loading ? null: {display:'none'}}>
+        <Row style={!desktop && !loading ? null : { display: "none" }}>
           <Col lg={12}>
             {desktop ? null : (
               <div>
@@ -114,24 +114,17 @@ export default function Landscape(props) {
                     position={1}
                     onLoad={imageLoaded}
                   />
-                 
                 </div>
               </Col>
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu
-              selectedOption="landscape"
-              showFade={showFade}
-              setShowFade={setShowFade}
-            />
+            <RightMenu showFade={showFade} setShowFade={setShowFade} />
           </Col>
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : (
-              <MobileBottomNav name="Street" route="/street" />
-            )}
+            {desktop ? null : <MobileBottomNav name="Street" route="/street" />}
           </Col>
         </Row>
       </Container>
