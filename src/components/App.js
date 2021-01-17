@@ -62,7 +62,7 @@ function App() {
           <About showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
         </Route>
         <Route exact path="/contact">
-          <Contact showFade={showFade} setShowFade={setShowFade} />
+          <Contact showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
         </Route>
       </Switch>
     </Router>
