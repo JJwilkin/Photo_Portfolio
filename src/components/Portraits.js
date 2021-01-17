@@ -131,7 +131,7 @@ export default function Portraits(props) {
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
             {desktop ? null : (
-              <MobileBottomNav name="Landscapes" route="/landscape" />
+              <MobileBottomNav name="Landscape" route="/landscape" />
             )}
           </Col>
         </Row>
