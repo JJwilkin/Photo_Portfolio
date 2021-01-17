@@ -13,7 +13,7 @@ import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Contact(props) {
-  const { showFade, setShowFade } = props;
+  const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
   const desktop = useMediaQuery("(min-width:1000px)");
 
@@ -27,6 +27,24 @@ export default function Contact(props) {
   return (
     <div className="App ">
       <Container fluid>
+      <Row style={!desktop && !loading ? null: {display:'none'}}>
+          <Col lg={12}>
+            {desktop ? null : (
+              <div>
+                <Fade when={!showMenu && !loading}>
+                  <Link to="/">
+                    <h2
+                      className="logo mobile-homepage-title"
+                      style={{ textAlign: "right" }}
+                    >
+                      jxshooter
+                    </h2>
+                  </Link>
+                </Fade>
+              </div>
+            )}
+          </Col>
+        </Row>
         <Row>
           <Col lg={1}>
             {desktop ? (
@@ -39,7 +57,7 @@ export default function Contact(props) {
           </Col>
 
           <Col lg={10}>
-            <Row style={{ height: "100vh" }}>
+            <Row style={desktop ? { height: "100vh" } : {height: "95vh"}}>
               <Col
                 style={{
                   display: "flex",
@@ -77,11 +95,11 @@ export default function Contact(props) {
                               </a>
                             </p>
                             <p className="right-align small-margin small-text">
-                              <b>Phone</b> &nbsp;
+                              <b>Text</b> &nbsp;
                               <a href="tel:6472194678">+1 (647) 219 4678</a>
                             </p>
                             <p className="right-align small-margin small-text">
-                              <b>Instagram</b> &nbsp;
+                              <b>IG</b> &nbsp;
                               <a
                                 target="_blank"
                                 href="https://www.instagram.com/jxshooter/"
@@ -99,7 +117,7 @@ export default function Contact(props) {
               </Col>
             </Row>
           </Col>
-          <Col lg={1}>
+          <Col lg={1} style={desktop ? null : { display: "none" }}>
             <RightMenu
               selectedOption="landscape"
               showFade={showFade}

@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.title {
+    font-size: 20px;
+}
+
+
 .max-height {
     height:100vh;
 }
@@ -33,4 +38,9 @@
    display: flex;
    justify-content: center;
    flex-direction: column;
+}
+
+.mobile-homepage-title{
+    text-align: right;
+    margin-top: 10px;
 }

@@ -11,11 +11,13 @@ import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
-
+import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import MobileBottomNav from "./MobileBottomNav";
+
 export default function Portraits(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
-  const { showFade, setShowFade } = props;
+  const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
@@ -37,6 +39,24 @@ export default function Portraits(props) {
   return (
     <div className="App">
       <Container fluid>
+        <Row style={!desktop && !loading ? null : { display: "none" }}>
+          <Col lg={12}>
+            {desktop ? null : (
+              <div>
+                <Fade when={!showMenu && !loading}>
+                  <Link to="/">
+                    <h2
+                      className="logo mobile-homepage-title"
+                      style={{ textAlign: "right" }}
+                    >
+                      jxshooter
+                    </h2>
+                  </Link>
+                </Fade>
+              </div>
+            )}
+          </Col>
+        </Row>
         <Row>
           <Col lg={1}>
             {desktop ? (
@@ -61,7 +81,7 @@ export default function Portraits(props) {
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
-                    title="Portrait"
+                    title="PORTRAIT"
                     description="Landscape photography shows spaces within the world,
                       sometimes vast and unending, but other times microscopic."
                     style={{ display: loading ? "none" : "block" }}
@@ -96,24 +116,6 @@ export default function Portraits(props) {
                     position={1}
                     onLoad={imageLoaded}
                   />
-                  {/* <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 2, 9]}
-                    position={2}
-                   
-                  />
-                  <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 8, 3]}
-                    position={1}
-                   
-                  />
-                  <TwoImages
-                    images={["./assets/rock.jpg", "./assets/toronto.jpg"]}
-                    dimensions={[1, 7, 1, 3]}
-                    positions={[1, 3]}
-                    
-                  /> */}
                 </div>
               </Col>
             </Row>
@@ -124,6 +126,13 @@ export default function Portraits(props) {
               showFade={showFade}
               setShowFade={setShowFade}
             />
+          </Col>
+        </Row>
+        <Row style={loading ? { display: "none" } : null}>
+          <Col lg={12}>
+            {desktop ? null : (
+              <MobileBottomNav name="Landscapes" route="/landscape" />
+            )}
           </Col>
         </Row>
       </Container>

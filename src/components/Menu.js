@@ -14,7 +14,7 @@ export default function Menu(props) {
   const [selectedOption, setOption] = useState(props.selectedOption);
 
   return (
-    <div style={desktop ? null: {height:'80vh'}} className="menu">
+    <div style={desktop ? null : { height: "83vh" }} className="menu">
       <Fade when={showFade}>
         <Link to="/">
           <h2
@@ -35,6 +35,7 @@ export default function Menu(props) {
             <tr>
               <Link
                 to="/"
+                
                 onClick={() => {
                   if (!desktop) {
                     setOption("portrait");
@@ -63,6 +64,7 @@ export default function Menu(props) {
             <tr>
               <Link
                 to="/landscape"
+                
                 onClick={() => {
                   if (!desktop) {
                     setOption("landscape");
@@ -136,8 +138,9 @@ export default function Menu(props) {
             >
               Contact Me &nbsp;+
             </h6>
-            </Link>
-            {desktop ? null:  <Link
+          </Link>
+          {desktop ? null : (
+            <Link
               to="/about"
               onClick={() => {
                 if (!desktop) {
@@ -153,9 +156,8 @@ export default function Menu(props) {
               >
                 About Me &nbsp;&#10230;
               </h6>
-            </Link>}
-            
-          
+            </Link>
+          )}
         </div>
       </Fade>
     </div>
