@@ -6,32 +6,38 @@
 
 @font-face { 
   font-family: p-black; 
-  src: url('./fonts/Poppins-Black.ttf') 
+  src: url('./fonts/Poppins-Black.ttf'); 
+  font-display: block;
 }
 
 @font-face { 
   font-family: p-bold; 
-  src: url('./fonts/Poppins-Bold.ttf') 
+  src: url('./fonts/Poppins-Bold.ttf');
+  font-display: block; 
 }
 
 @font-face { 
   font-family: p-semibold; 
-  src: url('./fonts/Poppins-SemiBold.ttf') 
+  src: url('./fonts/Poppins-SemiBold.ttf');
+  font-display: block; 
 }
 
 @font-face { 
   font-family: p-medium; 
-  src: url('./fonts/Poppins-Medium.ttf') 
+  src: url('./fonts/Poppins-Medium.ttf');
+  font-display: block; 
 } 
 
 @font-face { 
   font-family: p-regular; 
-  src: url('./fonts/Poppins-Regular.ttf') 
+  src: url('./fonts/Poppins-Regular.ttf');
+  font-display: block; 
 } 
 
 @font-face { 
   font-family: p-light; 
-  src: url('./fonts/Poppins-Light.ttf') 
+  src: url('./fonts/Poppins-Light.ttf');
+  font-display: block; 
 }
 
 #root {

@@ -10,22 +10,54 @@ import Fade from "react-reveal/Fade";
 import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import LoadingAnimation from "./LoadingAnimation";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-export default function Contact() {
+export default function Contact(props) {
+  const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
+  const desktop = useMediaQuery("(min-width:1000px)");
 
-  setTimeout(() => setLoading(false), 2100);
+  setTimeout(() => {
+    setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+  }, 2100);
 
   return (
     <div className="App ">
       <Container fluid>
+      <Row style={!desktop && !loading ? null: {display:'none'}}>
+          <Col lg={12}>
+            {desktop ? null : (
+              <div>
+                <Fade when={!showMenu && !loading}>
+                  <Link to="/">
+                    <h2
+                      className="logo mobile-homepage-title"
+                      style={{ textAlign: "right" }}
+                    >
+                      jxshooter
+                    </h2>
+                  </Link>
+                </Fade>
+              </div>
+            )}
+          </Col>
+        </Row>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="about" />
+            {desktop ? (
+              <Menu
+                selectedOption="contact"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>
-            <Row style={{ height: "100vh" }}>
+            <Row style={desktop ? { height: "100vh" } : {height: "95vh"}}>
               <Col
                 style={{
                   display: "flex",
@@ -53,21 +85,21 @@ export default function Contact() {
                           <h1 className="right-align">Joshua Wilkinson</h1>
                           {/* <h3 className="left-align">Let's collaborate</h3> */}
                           <div>
-                            <p className="right-align small-margin">
+                            <p className="right-align small-margin small-text">
                               <b>Email</b> &nbsp;
                               <a
                                 target="_blank"
-                                href="mailto:joshjeffreywilkinson@gmail.com"
+                                href="mailto:jxshooter@outlook.com"
                               >
-                                joshjeffreywilkinson@gmail.com
+                                jxshooter@outlook.com
                               </a>
                             </p>
-                            <p className="right-align small-margin">
-                              <b>Phone</b> &nbsp;
-                              <a href="tel:6472194678">+1 (647) 219 4678</a>
+                            <p className="right-align small-margin small-text">
+                              <b>Text</b> &nbsp;
+                              <a href="sms:6472194678">+1 (647) 219 4678</a>
                             </p>
-                            <p className="right-align small-margin">
-                              <b>Instagram</b> &nbsp;
+                            <p className="right-align small-margin small-text">
+                              <b>IG</b> &nbsp;
                               <a
                                 target="_blank"
                                 href="https://www.instagram.com/jxshooter/"
@@ -85,8 +117,12 @@ export default function Contact() {
               </Col>
             </Row>
           </Col>
-          <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+          <Col lg={1} style={desktop ? null : { display: "none" }}>
+            <RightMenu
+              selectedOption="landscape"
+              showFade={showFade}
+              setShowFade={setShowFade}
+            />
           </Col>
         </Row>
       </Container>

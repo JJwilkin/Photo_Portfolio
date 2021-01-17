@@ -3,31 +3,67 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PageTitleDescription from "./PageTitleDescription";
 import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Fade from "react-reveal/Fade";
-export default function Landscape() {
+import MobileBottomNav from "./MobileBottomNav";
+export default function Landscape(props) {
+  const desktop = useMediaQuery("(min-width:1000px)");
+  const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 5) {
-      setTimeout(() => setLoading(false), 2100);
+    if (counter.current >= 7) {
+      setTimeout(() => {
+        setShowFade(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+      }, 2100);
     }
   };
+
+  function showSettings(event) {
+    event.preventDefault();
+  }
 
   return (
     <div className="App">
       <Container fluid>
+        <Row style={!desktop && !loading ? null : { display: "none" }}>
+          <Col lg={12}>
+            {desktop ? null : (
+              <div>
+                <Fade when={!showMenu && !loading}>
+                  <Link to="/">
+                    <h2
+                      className="logo mobile-homepage-title"
+                      style={{ textAlign: "right" }}
+                    >
+                      jxshooter
+                    </h2>
+                  </Link>
+                </Fade>
+              </div>
+            )}
+          </Col>
+        </Row>
         <Row>
           <Col lg={1}>
-            <Menu selectedOption="landscape" />
+            {desktop ? (
+              <Menu
+                selectedOption="landscape"
+                showFade={showFade}
+                setShowFade={setShowFade}
+              />
+            ) : null}
           </Col>
 
           <Col lg={10}>
@@ -43,14 +79,14 @@ export default function Landscape() {
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
-                    title="Landscape"
+                    title="LANDSCAPE"
                     description="Landscape photography shows spaces within the world,
                       sometimes vast and unending, but other times microscopic."
                     style={{ display: loading ? "none" : "block" }}
                   />
                   <SingleImage
                     image="./assets/stu.jpg"
-                    dimensions={[1, 10, 1]}
+                    dimensions={[2, 9, 1]}
                     position={1}
                     onLoad={imageLoaded}
                   />
@@ -66,42 +102,29 @@ export default function Landscape() {
                     positions={[1, 2]}
                     onLoad={imageLoaded}
                   />
-                  {/* <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 3, 8]}
+                  <SingleImage
+                    image="./assets/toronto2.jpg"
+                    dimensions={[1, 5, 6]}
                     position={2}
-                    style={{ display: loading ? "none" : "block" }}
+                    onLoad={imageLoaded}
                   />
                   <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 8, 3]}
+                    image="./assets/james3.jpg"
+                    dimensions={[1, 5, 6]}
                     position={1}
-                    style={{ display: loading ? "none" : "block" }}
+                    onLoad={imageLoaded}
                   />
-                  <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 2, 9]}
-                    position={2}
-                    style={{ display: loading ? "none" : "block" }}
-                  />
-                  <SingleImage
-                    image="./assets/rock.jpg"
-                    dimensions={[1, 8, 3]}
-                    position={1}
-                    style={{ display: loading ? "none" : "block" }}
-                  />
-                  <TwoImages
-                    images={["./assets/rock.jpg", "./assets/toronto.jpg"]}
-                    dimensions={[1, 7, 1, 3]}
-                    positions={[1, 3]}
-                    style={{ display: loading ? "none" : "block" }}
-                  /> */}
                 </div>
               </Col>
             </Row>
           </Col>
           <Col lg={1}>
-            <RightMenu selectedOption="landscape" />
+            <RightMenu showFade={showFade} setShowFade={setShowFade} />
+          </Col>
+        </Row>
+        <Row style={loading ? { display: "none" } : null}>
+          <Col lg={12}>
+            {desktop ? null : <MobileBottomNav name="Street" route="/street" />}
           </Col>
         </Row>
       </Container>
