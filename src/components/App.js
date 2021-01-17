@@ -28,7 +28,7 @@ function App() {
     <Router>
       <ScrollToTop />
       
-      {desktop ? null: <Hamburger isOpen={showMenu} noOverlay customBurgerIcon={ <div><HiMenuAlt4 size={35} onClick={() =>{setShowMenu(true)}}/></div> }>
+      {desktop ? null: <Hamburger isOpen={showMenu} onStateChange={(state)=>{setShowMenu(state.isOpen)}} customBurgerIcon={ <div><HiMenuAlt4 size={35} onClick={() =>{setShowMenu(true)}}/></div> }>
         <Menu setShowMenu={setShowMenu}/>
         
       </Hamburger>}
