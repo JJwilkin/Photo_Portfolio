@@ -32,9 +32,6 @@ export default function Portraits(props) {
     }
   };
 
-  function showSettings(event) {
-    event.preventDefault();
-  }
 
   return (
     <div className="App">
@@ -86,36 +83,98 @@ export default function Portraits(props) {
                       sometimes vast and unending, but other times microscopic."
                     style={{ display: loading ? "none" : "block" }}
                   />
-                  <SingleImage
-                    image="./assets/stu.jpg"
-                    dimensions={[2, 9, 1]}
-                    position={1}
-                    onLoad={imageLoaded}
-                  />
-                  <TwoImages
-                    images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
-                    dimensions={[1, 5, 1, 5]}
-                    positions={[1, 3]}
-                    onLoad={imageLoaded}
-                  />
-                  <TwoImages
-                    images={["./assets/toronto.jpg", "./assets/james.jpg"]}
-                    dimensions={[1, 4, 6, 1]}
-                    positions={[1, 2]}
-                    onLoad={imageLoaded}
-                  />
-                  <SingleImage
-                    image="./assets/toronto2.jpg"
-                    dimensions={[1, 5, 6]}
-                    position={2}
-                    onLoad={imageLoaded}
-                  />
-                  <SingleImage
-                    image="./assets/james3.jpg"
-                    dimensions={[1, 5, 6]}
-                    position={1}
-                    onLoad={imageLoaded}
-                  />
+                  
+                    <div style={{ display: desktop ? "block" : "none" }}>
+                      <SingleImage
+                        image="./assets/stu.jpg"
+                        dimensions={[2, 9, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <TwoImages
+                        images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
+                        dimensions={[1, 5, 1, 5]}
+                        positions={[1, 3]}
+                        onLoad={imageLoaded}
+                      />
+                      <TwoImages
+                        images={["./assets/toronto.jpg", "./assets/james.jpg"]}
+                        dimensions={[1, 4, 6, 1]}
+                        positions={[1, 2]}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/toronto2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={2}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/james3.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                    </div>
+                  
+                    <div style={{ display: desktop ? "none" : "block" }}> 
+                      <SingleImage
+                        image="./assets/stu.jpg"
+                        dimensions={[2, 9, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/stu2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/stu3.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/toronto.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/james.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/toronto2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        images={["./assets/james3.jpg"]}
+                        dimensions={[1,5,6]}
+                        positions={1}
+                        onLoad={imageLoaded}
+                      />
+                     
+                      <SingleImage
+                        image="./assets/toronto2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={2}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/james3.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                    </div>
+                  
                 </div>
               </Col>
             </Row>
