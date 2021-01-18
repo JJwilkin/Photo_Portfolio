@@ -1,7 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./Menu.js";
 import Portraits from "./Portraits";
+import ReactDOM from "react-dom";
 
+import { createBrowserHistory } from "history";
 import "../stylesheets/App.css";
 import "../stylesheets/Hamburger.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -16,7 +18,19 @@ import { useEffect, useState } from "react";
 
 import { HiMenuAlt4 } from "react-icons/hi";
 import { slide as Hamburger } from "react-burger-menu";
+
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-187564630-1');
+// ReactGA.pageview(window.location.pathname + window.location.search);
+const history = createBrowserHistory();
+
+  // Initialize google analytics page view tracking
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
+    ReactGA.pageview(location.pathname); // Record a pageview for the given page
+  });
 function App() {
+  
   const [showMenu, setShowMenu] = useState(false);
 
   const [showFade, setShowFade] = useState(false);
@@ -24,7 +38,7 @@ function App() {
   useEffect(() => {}, [showFade, showMenu]);
 
   return (
-    <Router>
+    <Router history={history}>
       <ScrollToTop />
 
       {desktop ? null : (
@@ -50,19 +64,39 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <Portraits showFade={showFade} setShowFade={setShowFade} showMenu={showMenu} />
+          <Portraits
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
         </Route>
         <Route exact path="/landscape">
-          <Landscape showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
+          <Landscape
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
         </Route>
         <Route exact path="/toronto">
-          <Toronto showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
+          <Toronto
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
         </Route>
         <Route exact path="/about">
-          <About showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
+          <About
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
         </Route>
         <Route exact path="/contact">
-          <Contact showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
+          <Contact
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
         </Route>
       </Switch>
     </Router>
