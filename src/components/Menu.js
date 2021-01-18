@@ -92,17 +92,17 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
-                to="/street"
+                to="/toronto"
                 onClick={() => {
                   if (!desktop) {
-                    setOption("street");
+                    setOption("toronto");
                     setShowMenu(false);
                   }
                 }}
               >
                 <td
                   className={`num-col ${
-                    selectedOption == "street" ? "active-link" : "dim-text"
+                    selectedOption == "toronto" ? "active-link" : "dim-text"
                   }`}
                 >
                   03
@@ -110,10 +110,10 @@ export default function Menu(props) {
                 <td>
                   <h6
                     className={`${
-                      selectedOption == "street" ? "active-link" : "dim-text"
+                      selectedOption == "toronto" ? "active-link" : "dim-text"
                     }`}
                   >
-                    STREET
+                    TORONTO
                   </h6>
                 </td>
               </Link>

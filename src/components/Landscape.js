@@ -20,7 +20,7 @@ export default function Landscape(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 7) {
+    if (counter.current >= 13) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
@@ -79,40 +79,65 @@ export default function Landscape(props) {
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
-                    title="PORTRAIT"
-                    description="Landscape photography shows spaces within the world,
-                      sometimes vast and unending, but other times microscopic."
-                    style={{ display: loading ? "none" : "block" }}
+                    title="LANDSCAPE"
+                    description='"Landscape photography is the supreme test of the photographer - and often the supreme disappointment."'
+                    author="- Ansel Adams"
+                      style={{ display: loading ? "none" : "block" }}
                   />
                   
-                    <div style={{ display: desktop ? "block" : "none" }}>
+                  <div style={{ display: desktop ? "block" : "none" }}>
                       <SingleImage
-                        image="./assets/stu.jpg"
+                        image="./assets/landscape/DSC_2145-2.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
+                        images={["./assets/landscape/DSC_2078.jpg", "./assets/landscape/DSC_2087.jpg"]}
                         dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
+                      <SingleImage
+                        image="./assets/landscape/DSC_2297.jpg"
+                        dimensions={[1, 10,1 ]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      
                       <TwoImages
-                        images={["./assets/toronto.jpg", "./assets/james.jpg"]}
-                        dimensions={[1, 4, 6, 1]}
-                        positions={[1, 2]}
+                        images={["./assets/landscape/DSC_1832.jpg", "./assets/landscape/DSC_1861-2.jpg"]}
+                        dimensions={[1, 4, 1, 6]}
+                        positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/toronto2.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
+                        image="./assets/landscape/DSC_2958.jpg"
+                        dimensions={[1, 10, 1]}
+                        position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/james3.jpg"
-                        dimensions={[1, 5, 6]}
+                        image="./assets/landscape/DSC_1911-2.jpg"
+                        dimensions={[2, 6, 4]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/landscape/DSC_2001-2.jpg"
+                        dimensions={[4, 7, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <TwoImages
+                        images={["./assets/landscape/DSC_8398.jpg", "./assets/landscape/DSC_8371-3.jpg"]}
+                        dimensions={[1, 6, 1, 4]}
+                        positions={[1, 3]}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/landscape/DSC_2083-2.jpg"
+                        dimensions={[3, 8, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
@@ -120,56 +145,74 @@ export default function Landscape(props) {
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
                       <SingleImage
-                        image="./assets/stu.jpg"
+                        image="./assets/landscape/DSC_2145-2.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/stu2.jpg"
+                        image="./assets/landscape/DSC_2078.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/stu3.jpg"
+                        image="./assets/landscape/DSC_2087.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/toronto.jpg"
+                        image="./assets/landscape/DSC_2297.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/james.jpg"
+                        image="./assets/landscape/DSC_2958.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/toronto2.jpg"
+                        image="./assets/landscape/DSC_1832.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        images={["./assets/james3.jpg"]}
+                        images="./assets/landscape/DSC_1861-2.jpg"
                         dimensions={[1,5,6]}
                         positions={1}
                         onLoad={imageLoaded}
                       />
                      
                       <SingleImage
-                        image="./assets/toronto2.jpg"
+                        image="./assets/landscape/DSC_1911-2.jpg"
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/james3.jpg"
+                        image="./assets/landscape/DSC_2001-2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/landscape/DSC_8398.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/landscape/DSC_8371-3.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/landscape/DSC_2083-2.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
@@ -186,7 +229,7 @@ export default function Landscape(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Street" route="/street" />}
+            {desktop ? null : <MobileBottomNav name="Toronto" route="/toronto" />}
           </Col>
         </Row>
       </Container>

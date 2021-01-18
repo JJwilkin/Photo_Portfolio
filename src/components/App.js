@@ -6,7 +6,7 @@ import "../stylesheets/App.css";
 import "../stylesheets/Hamburger.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage.js";
-import Street from "./Street.js";
+import Toronto from "./Toronto.js";
 import Landscape from "./Landscape.js";
 import ScrollToTop from "./ScrollToTop";
 import About from "./About";
@@ -55,8 +55,8 @@ function App() {
         <Route exact path="/landscape">
           <Landscape showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
         </Route>
-        <Route exact path="/street">
-          <Street showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
+        <Route exact path="/toronto">
+          <Toronto showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>
         </Route>
         <Route exact path="/about">
           <About showFade={showFade} setShowFade={setShowFade} showMenu={showMenu}/>

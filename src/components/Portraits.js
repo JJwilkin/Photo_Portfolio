@@ -22,7 +22,7 @@ export default function Portraits(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 7) {
+    if (counter.current >= 12) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
@@ -79,96 +79,127 @@ export default function Portraits(props) {
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
                     title="PORTRAIT"
-                    description="Landscape photography shows spaces within the world,
-                      sometimes vast and unending, but other times microscopic."
+                    description='"There is one thing the photograph must contain, the humanity of the moment"'
+                    author="- Robert Frank"
                     style={{ display: loading ? "none" : "block" }}
                   />
                   
                     <div style={{ display: desktop ? "block" : "none" }}>
                       <SingleImage
-                        image="./assets/stu.jpg"
+                        image="./assets/portrait/stu.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/stu2.jpg", "./assets/stu3.jpg"]}
+                        images={["./assets/portrait/stu2-min.jpg", "./assets/portrait/stu3-min.jpg"]}
                         dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
-                      <TwoImages
-                        images={["./assets/toronto.jpg", "./assets/james.jpg"]}
-                        dimensions={[1, 4, 6, 1]}
-                        positions={[1, 2]}
-                        onLoad={imageLoaded}
-                      />
                       <SingleImage
-                        image="./assets/toronto2.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/james3.jpg"
-                        dimensions={[1, 5, 6]}
+                        image="./assets/portrait/jd-min.jpg"
+                        dimensions={[3, 6, 3]}
                         position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/hooman-min.jpg"
+                        dimensions={[5, 6, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <TwoImages
+                        images={["./assets/portrait/hooman2-min.jpg", "./assets/portrait/hooman3-min.jpg"]}
+                        dimensions={[1, 4, 1, 6]}
+                        positions={[1, 3]}
+                        onLoad={imageLoaded}
+                      />
+                      
+                      <SingleImage
+                        image="./assets/portrait/swetanoosh-min.jpg"
+                        dimensions={[1, 10, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/twins-min.jpg"
+                        dimensions={[2, 5, 5]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <TwoImages
+                        images={["./assets/portrait/grandpa1-min.jpg", "./assets/portrait/jd2-min.jpg"]}
+                        dimensions={[1, 6, 1, 4]}
+                        positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                     </div>
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
                       <SingleImage
-                        image="./assets/stu.jpg"
+                        image="./assets/portrait/stu.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/stu2.jpg"
+                        image="./assets/portrait/stu2-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/stu3.jpg"
+                        image="./assets/portrait/stu3-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/toronto.jpg"
+                        image="./assets/portrait/jd-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/james.jpg"
+                        image="./assets/portrait/hooman-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/toronto2.jpg"
+                        image="./assets/portrait/hooman2-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        images={["./assets/james3.jpg"]}
+                        images="./assets/portrait/hooman3-min.jpg"
                         dimensions={[1,5,6]}
                         positions={1}
                         onLoad={imageLoaded}
                       />
                      
                       <SingleImage
-                        image="./assets/toronto2.jpg"
+                        image="./assets/portrait/swetanoosh-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/james3.jpg"
+                        image="./assets/portrait/twins-min.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/grandpa1-min.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/jd2-min.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
