@@ -20,7 +20,9 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { slide as Hamburger } from "react-burger-menu";
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-187564630-1');
+
+function App() {
+  ReactGA.initialize('UA-187564630-1');
 // ReactGA.pageview(window.location.pathname + window.location.search);
 const history = createBrowserHistory();
 
@@ -29,8 +31,6 @@ const history = createBrowserHistory();
     ReactGA.set({ page: location.pathname }); // Update the user's current page
     ReactGA.pageview(location.pathname); // Record a pageview for the given page
   });
-function App() {
-  
   const [showMenu, setShowMenu] = useState(false);
 
   const [showFade, setShowFade] = useState(false);
