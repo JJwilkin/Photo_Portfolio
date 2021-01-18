@@ -226,7 +226,7 @@ export default function Toronto(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Portrait" route="/" />}
+            {desktop ? null : <MobileBottomNav name="Landscape" route="/landscape" />}
           </Col>
         </Row>
       </Container>

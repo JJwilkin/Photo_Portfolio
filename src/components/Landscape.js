@@ -229,7 +229,7 @@ export default function Landscape(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Toronto" route="/toronto" />}
+            {desktop ? null : <MobileBottomNav name="Portrait" route="/" />}
           </Col>
         </Row>
       </Container>

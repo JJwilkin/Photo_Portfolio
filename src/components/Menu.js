@@ -35,7 +35,6 @@ export default function Menu(props) {
             <tr>
               <Link
                 to="/"
-                
                 onClick={() => {
                   if (!desktop) {
                     setOption("portrait");
@@ -63,35 +62,6 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
-                to="/landscape"
-                
-                onClick={() => {
-                  if (!desktop) {
-                    setOption("landscape");
-                    setShowMenu(false);
-                  }
-                }}
-              >
-                <td
-                  className={`num-col ${
-                    selectedOption == "landscape" ? "active-link" : "dim-text"
-                  }`}
-                >
-                  02
-                </td>
-                <td>
-                  <h6
-                    className={`${
-                      selectedOption == "landscape" ? "active-link" : "dim-text"
-                    }`}
-                  >
-                    LANDSCAPE
-                  </h6>
-                </td>
-              </Link>
-            </tr>
-            <tr>
-              <Link
                 to="/toronto"
                 onClick={() => {
                   if (!desktop) {
@@ -105,7 +75,7 @@ export default function Menu(props) {
                     selectedOption == "toronto" ? "active-link" : "dim-text"
                   }`}
                 >
-                  03
+                  02
                 </td>
                 <td>
                   <h6
@@ -114,6 +84,34 @@ export default function Menu(props) {
                     }`}
                   >
                     TORONTO
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link
+                to="/landscape"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("landscape");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col ${
+                    selectedOption == "landscape" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  03
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "landscape" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    LANDSCAPE
                   </h6>
                 </td>
               </Link>
