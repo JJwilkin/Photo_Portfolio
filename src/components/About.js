@@ -77,7 +77,7 @@ export default function About(props) {
 
                 <Fade>
                   <div style={{ display: loading ? "none" : "block" }}>
-                    <Row style={{marginTop:25}}>
+                    <Row style={{ marginTop: 25 }}>
                       <Col></Col>
 
                       <Col lg={6}>
@@ -85,22 +85,21 @@ export default function About(props) {
                           {/* <p className="left-align">About</p> */}
                           <h3 className="left-align">I'm Josh</h3>
                           <p className="left-align small-text">
-                            I "began" photography in Christmas of 2016 when I got
-                            my first DSLR camera. It was a cheap Nikon with a
-                            kit lens and I shot on Auto for the first 6 months.
-                            My pictures were terrible. But despite that there
-                            was an undeniable satisfaction you feel when you
-                            capture a moment in time. Over the years, I learned
-                            new techniques (through youtube, trial and error,
-                            and other photographers) and in 2020 I began taking
-                            my photography seriously. I built this website from
-                            scratch (with the help and support of
-                            Aliya Rajwani) as a medium to document my journey
-                            through photography. Thank you if you read up to
-                            this far, and I hope you enjoy my work. Reach out to
-                            me and we can collaborate. Lastly, if I had to
-                            choose a quote to describe how I view photography it
-                            would be this:
+                            I "began" photography in Christmas of 2016 when I
+                            got my first DSLR camera. It was a cheap Nikon with
+                            a kit lens and I shot on Auto for the first 6
+                            months. My pictures were terrible. But despite that,
+                            I couldn't deny the satisfaction of capturing a
+                            moment in time. Over the years, I learned new
+                            techniques (through youtube, trial and error, and
+                            other photographers) and in 2020 I began taking my
+                            photography seriously. I built this website from
+                            scratch (with the help and support of Aliya Rajwani)
+                            as a medium to document my journey through
+                            photography. Thank you if you read up to this far,
+                            and I hope you enjoy my work. Reach out to me and we
+                            can collaborate. Lastly, if I had to choose a quote
+                            to describe how I view photography it would be this:
                           </p>
                           <p>
                             "You are always a student, never a master. You have
