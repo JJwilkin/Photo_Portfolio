@@ -21,7 +21,7 @@ export default function Toronto(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 11) {
+    if (counter.current >= 13) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
@@ -138,9 +138,20 @@ export default function Toronto(props) {
                       positions={[1, 3]}
                       onLoad={imageLoaded}
                     />
-
+                    <SingleImage
+                      image="./assets/toronto/toronto12.jpg"
+                      dimensions={[2, 5, 3]}
+                      position={1}
+                      onLoad={imageLoaded}
+                    />
                     <SingleImage
                       image="./assets/toronto/toronto5.jpg"
+                      dimensions={[5, 5, 2]}
+                      position={1}
+                      onLoad={imageLoaded}
+                    />
+                    <SingleImage
+                      image="./assets/toronto/toronto10.jpg"
                       dimensions={[2, 5, 3]}
                       position={1}
                       onLoad={imageLoaded}
@@ -210,8 +221,20 @@ export default function Toronto(props) {
                     />
 
                     <SingleImage
+                      image="./assets/toronto/toronto12.jpg"
+                      dimensions={[2, 5, 3]}
+                      position={1}
+                      onLoad={imageLoaded}
+                    />
+                    <SingleImage
                       image="./assets/toronto/toronto5.jpg"
-                      dimensions={[1, 5, 6]}
+                      dimensions={[2, 5, 3]}
+                      position={1}
+                      onLoad={imageLoaded}
+                    />
+                    <SingleImage
+                      image="./assets/toronto/toronto10.jpg"
+                      dimensions={[2, 5, 3]}
                       position={1}
                       onLoad={imageLoaded}
                     />
@@ -226,7 +249,9 @@ export default function Toronto(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Landscape" route="/landscape" />}
+            {desktop ? null : (
+              <MobileBottomNav name="Landscape" route="/landscape" />
+            )}
           </Col>
         </Row>
       </Container>
