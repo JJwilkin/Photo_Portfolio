@@ -34,7 +34,7 @@ export default function About(props) {
   return (
     <div className="App ">
       <Container fluid>
-      <Row style={!desktop && !loading ? null: {display:'none'}}>
+        <Row style={!desktop && !loading ? null : { display: "none" }}>
           <Col lg={12}>
             {desktop ? null : (
               <div>
@@ -52,9 +52,9 @@ export default function About(props) {
             )}
           </Col>
         </Row>
-        <Row >
+        <Row>
           <Col lg={1}>
-          {desktop ? (
+            {desktop ? (
               <Menu
                 selectedOption="about"
                 showFade={showFade}
@@ -64,7 +64,7 @@ export default function About(props) {
           </Col>
 
           <Col lg={10}>
-            <Row style={{ height: "100vh" }}>
+            <Row style={desktop ? { height: "100vh" } : null}>
               <Col className="center-content" lg={12}>
                 <Fade opposite>
                   <div
@@ -77,22 +77,36 @@ export default function About(props) {
 
                 <Fade>
                   <div style={{ display: loading ? "none" : "block" }}>
-                    <Row>
+                    <Row style={{marginTop:25}}>
                       <Col></Col>
 
-                      
-                      <Col lg={5}>
+                      <Col lg={6}>
                         <Fade bottom>
                           {/* <p className="left-align">About</p> */}
                           <h3 className="left-align">I'm Josh</h3>
-                          <p className="left-align">
-                            Landscape photography shows spaces within the world,
-                            sometimes vast and unending, but other times
-                            microscopic. Landscape photography shows spaces
-                            within the world, sometimes vast and unending, but
-                            other times microscopic.
+                          <p className="left-align small-text">
+                            I "began" photography in Christmas of 2016 when I got
+                            my first DSLR camera. It was a cheap Nikon with a
+                            kit lens and I shot on Auto for the first 6 months.
+                            My pictures were terrible. But despite that there
+                            was an undeniable satisfaction you feel when you
+                            capture a moment in time. Over the years, I learned
+                            new techniques (through youtube, trial and error,
+                            and other photographers) and in 2020 I began taking
+                            my photography seriously. I built this website from
+                            scratch (with the help and support of
+                            Aliya Rajwani) as a medium to document my journey
+                            through photography. Thank you if you read up to
+                            this far, and I hope you enjoy my work. Reach out to
+                            me and we can collaborate. Lastly, if I had to
+                            choose a quote to describe how I view photography it
+                            would be this:
                           </p>
-                       
+                          <p>
+                            "You are always a student, never a master. You have
+                            to keep moving forward."{" "}
+                          </p>
+                          <p>- Conrad Hall</p>
                         </Fade>
                       </Col>
                       <Col lg={4}>

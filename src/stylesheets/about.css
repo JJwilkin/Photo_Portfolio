@@ -3,5 +3,9 @@
 }
 
 .left-align {
-    text-align: left;
+    text-align: justify;
+}
+
+.small-text {
+    font-size:8px;
 }

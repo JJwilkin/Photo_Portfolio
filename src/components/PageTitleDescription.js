@@ -10,7 +10,7 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 
 export default function PageTitleDescription(props) {
-  const { title, description } = props;
+  const { title, description, author } = props;
   return (
     
       <Row className="page-title">
@@ -20,6 +20,7 @@ export default function PageTitleDescription(props) {
         <Fade bottom>
           <h6 className="text-align title">{title}</h6>
           <p className="text-align p-style">{description}</p>
+          <p className="text-align p-style">{author}</p>
           </Fade>
         </Col>
         <Col lg={1}></Col>

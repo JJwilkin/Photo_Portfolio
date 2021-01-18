@@ -38,10 +38,10 @@ export default function HomePage() {
                       </Link>
                     </tr>
                     <tr>
-                      <Link to="/street">
+                      <Link to="/urban">
                         <td className="num-col">03</td>
                         <td>
-                          <h6>STREET</h6>
+                          <h6>urban</h6>
                         </td>
                       </Link>
                     </tr>
