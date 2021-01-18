@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
@@ -13,6 +13,8 @@ import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
+import ReactGA from 'react-ga';
+
 export default function Landscape(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
@@ -30,9 +32,9 @@ export default function Landscape(props) {
     }
   };
 
-  function showSettings(event) {
-    event.preventDefault();
-  }
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
 
   return (
     <div className="App">

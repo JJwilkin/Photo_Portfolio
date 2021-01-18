@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./Menu";
 import "../stylesheets/App.css";
@@ -13,6 +13,7 @@ import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MobileBottomNav from "./MobileBottomNav";
+import ReactGA from 'react-ga';
 
 export default function Toronto(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
@@ -31,9 +32,9 @@ export default function Toronto(props) {
     }
   };
 
-  function showSettings(event) {
-    event.preventDefault();
-  }
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
 
   return (
     <div className="App">

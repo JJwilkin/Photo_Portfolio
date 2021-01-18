@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/about.css";
@@ -11,6 +11,7 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import ReactGA from 'react-ga';
 
 export default function Contact(props) {
   const { showFade, setShowFade, showMenu } = props;
@@ -24,6 +25,9 @@ export default function Contact(props) {
         }, 300);
   }, 2100);
 
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
   return (
     <div className="App ">
       <Container fluid>

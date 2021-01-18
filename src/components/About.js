@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../stylesheets/App.css";
 import "../stylesheets/about.css";
@@ -11,7 +11,7 @@ import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import Lottie from "react-lottie";
 import animationData from "./loading2.json";
-
+import ReactGA from 'react-ga';
 import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -31,6 +31,10 @@ export default function About(props) {
       }, 2100);
     }
   };
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
   return (
     <div className="App ">
       <Container fluid>
