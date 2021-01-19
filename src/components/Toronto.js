@@ -82,7 +82,7 @@ export default function Toronto(props) {
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
                     title="TORONTO"
-                    description={`"When I think of myself, I think of Toronto. My music would never sound the way it does if it weren't for Toronto"`}
+                    description={`"When I think of myself, I think of Toronto. My music would never sound the way it does if it weren't for this city"`}
                     author="- Drake"
                     style={{ display: loading ? "none" : "block" }}
                   />
