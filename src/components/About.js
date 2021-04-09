@@ -115,7 +115,7 @@ export default function About(props) {
                       <Col lg={4}>
                         <img
                           className="d-block w-100"
-                          src="./assets/josh_beach.jpg"
+                          src="./assets/joshua2.jpg"
                           alt="First slide"
                           onLoad={imageLoaded}
                         />
