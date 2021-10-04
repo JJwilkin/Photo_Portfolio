@@ -87,10 +87,10 @@ export default function Toronto(props) {
                     style={{ display: loading ? "none" : "block" }}
                   />
 
-                  <div style={{ display: desktop ? "block" : "none" }}>
+                  <div style={{ display: "block"  }}>
                     <SingleImage
                       image="./assets/toronto/toronto-polson.jpg"
-                      dimensions={[2, 9, 1]}
+                      dimensions={[2, 8, 2]}
                       position={1}
                       onLoad={imageLoaded}
                     />
@@ -159,87 +159,7 @@ export default function Toronto(props) {
                     />
                   </div>
 
-                  <div style={{ display: desktop ? "none" : "block" }}>
-                    <SingleImage
-                      image="./assets/toronto/toronto-polson.jpg"
-                      dimensions={[2, 9, 1]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto8.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto7.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto2.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto9.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto3.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto4.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={2}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/james4-min.jpg"
-                      dimensions={[1, 5, 6]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      images="./assets/toronto/james2.jpg"
-                      dimensions={[1, 5, 6]}
-                      positions={1}
-                      onLoad={imageLoaded}
-                    />
-
-                    <SingleImage
-                      image="./assets/toronto/toronto12.jpg"
-                      dimensions={[2, 5, 3]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto5.jpg"
-                      dimensions={[2, 5, 3]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                    <SingleImage
-                      image="./assets/toronto/toronto10.jpg"
-                      dimensions={[2, 5, 3]}
-                      position={1}
-                      onLoad={imageLoaded}
-                    />
-                  </div>
+                 
                 </div>
               </Col>
             </Row>

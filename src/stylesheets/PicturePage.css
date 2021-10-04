@@ -7,7 +7,7 @@
     font-size: 14px;
 }
 .picture-spacing{
-    margin-top: 10%;
+    margin-bottom: 15%;
 }
 
 .main-content {
@@ -17,8 +17,8 @@
 }
 
 .page-title {
-    height:25vh;
-    margin-top:3vh;
+    height:auto;
+    margin-top:6vh;
     margin-bottom: 0;
     display: flex;
     justify-content: center;

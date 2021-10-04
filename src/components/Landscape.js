@@ -82,19 +82,21 @@ export default function Landscape(props) {
                 <div style={{ display: loading ? "none" : "block" }}>
                   
                   
-                  <div className={{ display: desktop ? "block" : "none" , maxWidth:300}}>
-                      <SingleImage
-                        image="./assets/landscape/DSC_2145-2.jpg"
-                        dimensions={[2, 9, 1]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <PageTitleDescription
+                  <div className={{ display: "block" }}>
+                  
+                  <PageTitleDescription
                     title="LANDSCAPE"
                     description='"Landscape photography is the supreme test of the photographer - and often the supreme disappointment."'
                     author="- Ansel Adams"
                       style={{ display: loading ? "none" : "block" }}
                   />
+                      <SingleImage
+                        image="./assets/landscape/DSC_2145-2.jpg"
+                        dimensions={[2, 8, 2]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                     
                       <TwoImages
                         images={["./assets/landscape/DSC_2078.jpg", "./assets/landscape/DSC_2087.jpg"]}
                         dimensions={[1, 5, 1, 5]}
@@ -146,81 +148,7 @@ export default function Landscape(props) {
                       />
                     </div>
                   
-                    <div style={{ display: desktop ? "none" : "block" }}> 
-                      <SingleImage
-                        image="./assets/landscape/DSC_2145-2.jpg"
-                        dimensions={[2, 9, 1]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2078.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2087.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2297.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2958.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_1832.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        images="./assets/landscape/DSC_1861-2.jpg"
-                        dimensions={[1,5,6]}
-                        positions={1}
-                        onLoad={imageLoaded}
-                      />
-                     
-                      <SingleImage
-                        image="./assets/landscape/DSC_1911-2.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2001-2.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_8398.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_8371-3.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/landscape/DSC_2083-2.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                    </div>
+                  
                   
                 </div>
               </Col>
@@ -232,7 +160,7 @@ export default function Landscape(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Portrait" route="/" />}
+            {desktop ? null : <MobileBottomNav name="Banff" route="/banff" />}
           </Col>
         </Row>
       </Container>

@@ -64,14 +64,14 @@ td > h6 {
 .contact {
     margin-left: 50px;
 }
-.page-title {
+/* .page-title {
     height:25vh;
     margin-top:3vh;
     margin-bottom: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .large-text {
     font-size: 100px;

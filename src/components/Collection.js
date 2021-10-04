@@ -14,10 +14,10 @@ import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from "react-ga";
-import "./Collection.css"
+import "./Collection.css";
 
 export default function Collection(props) {
-  const desktop = useMediaQuery("(min-width:1200px)");
+  const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
   const counter = useRef(13);
@@ -84,14 +84,13 @@ export default function Collection(props) {
                     <LoadingAnimation />
                   </div>
                 </Fade>
-                <div style={{ display: loading ? "none" : "block" }}>
-                  <PageTitleDescription
-                    title="TORONTO"
-                    description={`"When I think of myself, I think of Toronto. My music would never sound the way it does if it weren't for this city"`}
-                    author="- Drake"
-                    style={{ display: loading ? "none" : "block" }}
-                  />
-
+                <div
+                  style={{
+                    display: loading ? "none" : "block",
+                    marginTop: desktop ? "15vh" :"10vh",
+                  }}
+                >
+                <h1 style={styles.title}> Collections </h1>
                   <div
                     style={{
                       display: desktop ? "block" : "none",
@@ -101,76 +100,202 @@ export default function Collection(props) {
                     <Fade opposite>
                       <Row>
                         <Col>
-                        <Link to="/">
-                          <div
-                            style={{
-                              backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              backgroundRepeat: "no-repeat",
-                              width: "100%",
-                              height: "30vh",
-                              
-                            }}
-                          >
+                          <Link to="/">
                             <div
-                              
-                              className="image-tile"
+                              style={{
+                                backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
                             >
-                              <h3 style={{marginLeft:15, color:'white'}}  >Portrait</h3>
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Portrait
+                                </h3>
+                              </div>
                             </div>
-                          </div>
                           </Link>
                         </Col>
+
                         <Col>
-                            <Link to="/landscape">
-                                <div
-                                    style={{
-                                    backgroundImage: `url(${"./assets/landscape/DSC_2145-2.jpg"})`,
-                                    backgroundPosition: "center",
-                                    backgroundSize: "cover",
-                                    backgroundRepeat: "no-repeat",
-                                    width: "100%",
-                                    height: "30vh",
-                                    
-                                    }}
-                                >
-                                    <div
-                                    
-                                    className="image-tile"
-                                    >
-                                    <h3 style={{marginLeft:15, color:'white'}} >Landscape</h3>
-                                    </div>
-                                </div>
+                          <Link to="/toronto">
+                            <div
+                              style={{
+                                backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
+                            >
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Toronto
+                                </h3>
+                              </div>
+                            </div>
                           </Link>
                         </Col>
+                      </Row>
+                    </Fade>
+                  </div>
+                  <div
+                    style={{
+                      display: desktop ? "block" : "none",
+                      marginBottom: 30,
+                    }}
+                  >
+                    <Fade opposite>
+                      <Row>
                         <Col>
-                        <Link to="/toronto">
-                          <div
-                            style={{
-                              backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              backgroundRepeat: "no-repeat",
-                              width: "100%",
-                              height: "30vh",
-                              
-                            }}
-                          >
+                          <Link to="/banff">
                             <div
-                              
-                              className="image-tile"
+                              style={{
+                                backgroundImage: `url(${"./assets/banff/blueMountain.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
                             >
-                              <h3 style={{marginLeft:15, color:'white'}}  >Toronto</h3>
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Banff
+                                </h3>
+                              </div>
                             </div>
-                          </div>
+                          </Link>
+                        </Col>
+
+                        <Col>
+                          <Link to="/landscape">
+                            <div
+                              style={{
+                                backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
+                            >
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Landscape
+                                </h3>
+                              </div>
+                            </div>
                           </Link>
                         </Col>
                       </Row>
                     </Fade>
                   </div>
 
-                  <div style={{ display: desktop ? "none" : "block" }}></div>
+                  <div style={{ display: desktop ? "none" : "block" }}>
+                    <div style={{ marginBottom: 30 }}>
+                      <Fade opposite>
+                      <Row>
+                        <Col>
+                          <Link to="/">
+                            <div
+                              style={{
+                                backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
+                            >
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Portrait
+                                </h3>
+                              </div>
+                            </div>
+                          </Link>
+                        </Col>
+
+                        <Col>
+                          <Link to="/toronto">
+                            <div
+                              style={{
+                                backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
+                                backgroundPosition: "center",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                width: "100%",
+                                height: "30vh",
+                              }}
+                            >
+                              <div className="image-tile">
+                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                  Toronto
+                                </h3>
+                              </div>
+                            </div>
+                          </Link>
+                        </Col>
+                      </Row>
+                      </Fade>
+                    </div>
+                    <div style={{ marginBottom: 20 }}>
+                      <Fade opposite>
+                        <Row>
+                          <Col>
+                            <Link to="/banff">
+                              <div
+                                style={{
+                                  backgroundImage: `url(${"./assets/banff/blueMountain.jpg"})`,
+                                  backgroundPosition: "center",
+                                  backgroundSize: "cover",
+                                  backgroundRepeat: "no-repeat",
+                                  width: "100%",
+                                  height: "30vh",
+                                }}
+                              >
+                                <div className="image-tile">
+                                  <h3
+                                    style={{ marginLeft: 15, color: "white" }}
+                                  >
+                                    Banff
+                                  </h3>
+                                </div>
+                              </div>
+                            </Link>
+                          </Col>
+
+                          <Col>
+                            <Link to="/landscape">
+                              <div
+                                style={{
+                                  backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
+                                  backgroundPosition: "center",
+                                  backgroundSize: "cover",
+                                  backgroundRepeat: "no-repeat",
+                                  width: "100%",
+                                  height: "30vh",
+                                }}
+                              >
+                                <div className="image-tile">
+                                  <h3
+                                    style={{ marginLeft: 15, color: "white" }}
+                                  >
+                                    Landscape
+                                  </h3>
+                                </div>
+                              </div>
+                            </Link>
+                          </Col>
+                        </Row>
+                      </Fade>
+                    </div>
+                  </div>
                 </div>
               </Col>
             </Row>
@@ -182,6 +307,7 @@ export default function Collection(props) {
             )}
           </Col>
         </Row>
+
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
             {desktop ? null : (
@@ -192,4 +318,12 @@ export default function Collection(props) {
       </Container>
     </div>
   );
+}
+
+const styles = {
+    title: {
+        fontWeight: 500,
+        marginBottom:20,
+        textAlign: 'center'
+    }
 }

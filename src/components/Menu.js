@@ -118,6 +118,34 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
+                to="/banff"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("banff");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col ${
+                    selectedOption == "banff" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  04
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "banff" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    BANFF
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link
                 to="/collections"
                 onClick={() => {
                   if (!desktop) {

@@ -86,10 +86,10 @@ export default function Portraits(props) {
                     style={{ display: loading ? "none" : "block" }}
                   />
                   
-                    <div style={{ display: desktop ? "block" : "none" }}>
+                    <div style={{ display: "block"}}>
                       <SingleImage
                         image="./assets/portrait/stu.jpg"
-                        dimensions={[2, 9, 1]}
+                        dimensions={[2, 8, 2]}
                         position={1}
                         onLoad={imageLoaded}
                       />
@@ -150,93 +150,7 @@ export default function Portraits(props) {
                       />
                     </div>
                   
-                    <div style={{ display: desktop ? "none" : "block" }}> 
-                      <SingleImage
-                        image="./assets/portrait/stu.jpg"
-                        dimensions={[2, 9, 1]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/stu2-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/stu3-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/jd-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/hooman-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/hooman2-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        images="./assets/portrait/hooman3-min.jpg"
-                        dimensions={[1,5,6]}
-                        positions={1}
-                        onLoad={imageLoaded}
-                      />
-                     
-                      <SingleImage
-                        image="./assets/portrait/swetanoosh-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/janagan1-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/janagan2-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/janagan_lamp.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/twins-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={2}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/grandpa1-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                      <SingleImage
-                        image="./assets/portrait/jd2-min.jpg"
-                        dimensions={[1, 5, 6]}
-                        position={1}
-                        onLoad={imageLoaded}
-                      />
-                    </div>
+                    
                   
                 </div>
               </Col>

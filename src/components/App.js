@@ -10,6 +10,7 @@ import HomePage from "./HomePage.js";
 import Toronto from "./Toronto.js";
 import Collection from "./Collection.js";
 import Landscape from "./Landscape.js";
+import Banff from './Banff.js';
 import ScrollToTop from "./ScrollToTop";
 import About from "./About";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -80,6 +81,13 @@ function App() {
         </Route>
         <Route exact path="/toronto">
           <Toronto
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
+        </Route>
+        <Route exact path="/banff">
+          <Banff
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}

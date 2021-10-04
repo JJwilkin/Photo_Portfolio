@@ -23,7 +23,7 @@ export default function PageTitleDescription(props) {
           <p className="text-align p-style">{author}</p>
           </Fade>
         </Col>
-        <Col lg={1}></Col>
+        <Col lg={2}></Col>
       </Row>
     
   );
