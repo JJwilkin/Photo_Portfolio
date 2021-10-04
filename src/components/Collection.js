@@ -298,7 +298,7 @@ export default function Collection(props) {
                                 <div className="image-tile">
                                   <div
                                     style={{
-                                      fontSize: 35,
+                                      fontSize: 25,
 
                                       color: "white",
                                       position: "absolute",
@@ -330,7 +330,7 @@ export default function Collection(props) {
                                 <div className="image-tile">
                                   <div
                                     style={{
-                                      fontSize: 35,
+                                      fontSize: 25,
 
                                       color: "white",
                                       position: "absolute",
@@ -367,7 +367,7 @@ export default function Collection(props) {
                                 <div className="image-tile">
                                   <div
                                     style={{
-                                      fontSize: 35,
+                                      fontSize: 25,
 
                                       color: "white",
                                       position: "absolute",
@@ -399,7 +399,7 @@ export default function Collection(props) {
                                 <div className="image-tile">
                                   <div
                                     style={{
-                                      fontSize: 35,
+                                      fontSize: 25,
 
                                       color: "white",
                                       position: "absolute",
