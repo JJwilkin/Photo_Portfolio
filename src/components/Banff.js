@@ -22,7 +22,7 @@ export default function Banff(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 0) {
+    if (counter.current >= 10) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
@@ -82,7 +82,7 @@ export default function Banff(props) {
                 <div style={{ display: loading ? "none" : "block" }}>
                   
                   
-                  <div>
+                  <div className={{ display: desktop ? "block" : "none" , maxWidth:300}}>
                   <PageTitleDescription
                     title="BANFF"
                     description='"Look deep into nature, and you will understand everything better."'
@@ -136,7 +136,76 @@ export default function Banff(props) {
                       />
                     </div>
                   
-                   
+                    <div style={{ display: desktop ? "none" : "block" }}> 
+                      <SingleImage
+                        image="./assets/banff/louise.jpg"
+                        dimensions={[2, 9, 1]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/fisherman.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/blackfalls.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/elk2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/elk1.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/blueMountain.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        images="./assets/banff/forest1.jpg"
+                        dimensions={[1,5,6]}
+                        positions={1}
+                        onLoad={imageLoaded}
+                      />
+                     
+                      <SingleImage
+                        image="./assets/banff/forest2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={2}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/shadow2.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/shadow.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/banff/moose3.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+
+                    </div>
                   
                 </div>
               </Col>
