@@ -96,14 +96,14 @@ export default function Collection(props) {
                 <div
                   style={{
                     display: loading ? "none" : "block",
-                    marginTop: desktop ? "15vh" : "10vh",
+                    marginTop: desktop ? "10vh" : "10vh",
                   }}
                 >
                   <Fade bottom>
                     <h3
                       style={{
                         textAlign: "left",
-                        fontSize: desktop ? 45 : 35,
+                        fontSize: desktop ? 43 : 35,
                         marginBottom: 5,
                       }}
                     >
@@ -152,7 +152,7 @@ export default function Collection(props) {
                               <div className="image-tile">
                                 <div
                                   style={{
-                                    fontSize: 35,
+                                    fontSize: 30,
 
                                     color: "white",
                                     position: "absolute",
@@ -185,7 +185,7 @@ export default function Collection(props) {
                               <div className="image-tile">
                                 <div
                                   style={{
-                                    fontSize: 35,
+                                    fontSize: 30,
 
                                     color: "white",
                                     position: "absolute",
@@ -226,7 +226,7 @@ export default function Collection(props) {
                               <div className="image-tile">
                                 <div
                                   style={{
-                                    fontSize: 35,
+                                    fontSize: 30,
 
                                     color: "white",
                                     position: "absolute",
@@ -259,7 +259,7 @@ export default function Collection(props) {
                               <div className="image-tile">
                                 <div
                                   style={{
-                                    fontSize: 35,
+                                    fontSize: 30,
 
                                     color: "white",
                                     position: "absolute",
