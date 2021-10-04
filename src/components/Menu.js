@@ -159,7 +159,7 @@ export default function Menu(props) {
                     selectedOption == "collections" ? "active-link" : "dim-text"
                   }`}
                 >
-                  &#10230;
+                  ☰
                 </td>
                 <td>
                   <h6
@@ -167,7 +167,7 @@ export default function Menu(props) {
                       selectedOption == "collections" ? "active-link" : "dim-text"
                     }`}
                   >
-                    ALL COLLECTIONS
+                    COLLECTIONS
                   </h6>
                 </td>
               </Link>
