@@ -34,6 +34,14 @@ export default function Collection(props) {
   };
 
   useEffect(() => {
+    let img1 = new Image();
+    let img2 = new Image();
+    let img3 = new Image();
+    let img4= new Image();
+    img1.src=`url(${"./assets/portrait/stu.jpg"})`;
+    img2.src=`url(${"./assets/toronto/toronto11.jpg"})`;
+    img3.src=`url(${"./assets/landscape/DSC_2083-2.jpg"})`;
+    img4.src=`url(${"./assets/banff/blueMountain.jpg"})`;
     imageLoaded();
   }, []);
 
