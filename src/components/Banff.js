@@ -61,7 +61,7 @@ export default function Toronto(props) {
           <Col lg={1}>
             {desktop ? (
               <Menu
-                selectedOption="toronto"
+                selectedOption="banff"
                 showFade={showFade}
                 setShowFade={setShowFade}
               />
