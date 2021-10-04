@@ -49,7 +49,7 @@ export default function Toronto(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      jxshooter
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>
@@ -251,7 +251,7 @@ export default function Toronto(props) {
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
             {desktop ? null : (
-              <MobileBottomNav name="Landscape" route="/landscape" />
+              <MobileBottomNav name="Yellowstone" route="/yellowstone" />
             )}
           </Col>
         </Row>

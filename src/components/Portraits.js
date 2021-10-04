@@ -48,7 +48,7 @@ export default function Portraits(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      jxshooter
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>

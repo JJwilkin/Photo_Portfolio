@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage.js";
 import Toronto from "./Toronto.js";
 import Collection from "./Collection.js";
-import Landscape from "./Landscape.js";
+import Yellowstone from "./Yellowstone.js";
 import Banff from './Banff.js';
 import ScrollToTop from "./ScrollToTop";
 import About from "./About";
@@ -79,8 +79,8 @@ function App() {
             showMenu={showMenu}
           />
         </Route>
-        <Route exact path="/landscape">
-          <Landscape
+        <Route exact path="/yellowstone">
+          <Yellowstone
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}

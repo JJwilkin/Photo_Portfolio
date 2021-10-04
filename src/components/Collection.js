@@ -63,7 +63,7 @@ export default function Collection(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      jxshooter
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>
@@ -96,10 +96,10 @@ export default function Collection(props) {
                 <div
                   style={{
                     display: loading ? "none" : "block",
-                    marginTop: desktop ? "10vh" : "10vh",
+                    marginTop: desktop ? "20vh" : "10vh",
                   }}
                 >
-                  <Fade bottom>
+                  {/* <Fade bottom>
                     <h3
                       style={{
                         textAlign: "left",
@@ -127,7 +127,7 @@ export default function Collection(props) {
                         Contact Me +
                       </p>
                     </Link>
-                  </Fade>
+                  </Fade> */}
                   <div
                     style={{
                       display: desktop ? "block" : "none",
@@ -245,7 +245,7 @@ export default function Collection(props) {
                       
                         <Col style={{ marginBottom: 30 }}>
                         <Fade opposite>
-                          <Link to="/landscape">
+                          <Link to="/yellowstone">
                             <div
                               style={{
                                 backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
@@ -267,7 +267,7 @@ export default function Collection(props) {
                                     left: 20,
                                   }}
                                 >
-                                  Landscape
+                                  Yellowstone
                                 </div>
                               </div>
                             </div>
@@ -385,7 +385,7 @@ export default function Collection(props) {
 
                           <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
-                            <Link to="/landscape">
+                            <Link to="/yellowstone">
                               <div
                                 style={{
                                   backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
@@ -407,7 +407,7 @@ export default function Collection(props) {
                                       left: 20,
                                     }}
                                   >
-                                    Landscape
+                                    Yellowstone
                                   </div>
                                 </div>
                               </div>

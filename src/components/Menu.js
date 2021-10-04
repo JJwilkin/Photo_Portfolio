@@ -26,7 +26,7 @@ export default function Menu(props) {
               }
             }}
           >
-            jxshooter
+            Joshua Wilkinson
           </h2>
         </Link>
 
@@ -90,17 +90,17 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
-                to="/landscape"
+                to="/yellowstone"
                 onClick={() => {
                   if (!desktop) {
-                    setOption("landscape");
+                    setOption("yellowstone");
                     setShowMenu(false);
                   }
                 }}
               >
                 <td
                   className={`num-col ${
-                    selectedOption == "landscape" ? "active-link" : "dim-text"
+                    selectedOption == "yellowstone" ? "active-link" : "dim-text"
                   }`}
                 >
                   03
@@ -108,10 +108,10 @@ export default function Menu(props) {
                 <td>
                   <h6
                     className={`${
-                      selectedOption == "landscape" ? "active-link" : "dim-text"
+                      selectedOption == "yellowstone" ? "active-link" : "dim-text"
                     }`}
                   >
-                    LANDSCAPE
+                    YELLOWSTONE
                   </h6>
                 </td>
               </Link>
