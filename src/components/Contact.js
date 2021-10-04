@@ -23,7 +23,7 @@ export default function Contact(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-  }, 2100);
+  }, 1000);
 
   useEffect(()=>{
     ReactGA.pageview(window.location.pathname + window.location.search);

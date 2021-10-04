@@ -28,7 +28,7 @@ export default function Toronto(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 2100);
+      }, 1300);
     }
   };
 

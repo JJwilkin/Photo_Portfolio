@@ -1,7 +1,8 @@
 .image-tile {
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
-    align-items: end;
+    align-items: end; */
+    position:relative;
     height: 100%;
     width: 100%;
     padding-left: 15;

@@ -29,7 +29,7 @@ export default function Collection(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 2600);
+      }, 1500);
     }
   };
 
@@ -91,20 +91,20 @@ export default function Collection(props) {
                   }}
                 >
                   <Fade bottom>
-                    <h1
+                    <h3
                       style={{
                         textAlign: "left",
-
+                        fontSize: desktop ? 45 : 35,
                         marginBottom: 5,
                       }}
                     >
                       {" "}
                       Hey, I'm Josh 👋{" "}
-                    </h1>
+                    </h3>
                     <p style={{ marginBottom: 20, fontSize: 18 }}>
                       Welcome to my portfolio! I'm a Toronto based photographer
-                      with a passion for capturing beauty in people and
-                      nature; using pictures to tell their story.{" "}
+                      with a passion for capturing beauty in people and nature;
+                      using pictures to tell their story.{" "}
                     </p>
                     <Link to="/contact">
                       <p
@@ -112,7 +112,7 @@ export default function Collection(props) {
                           textAlign: "left",
                           marginTop: 20,
                           marginBottom: 30,
-                          textDecoration:'underline'
+                          textDecoration: "underline",
                         }}
                       >
                         Contact Me +
@@ -140,9 +140,18 @@ export default function Collection(props) {
                               }}
                             >
                               <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                <div
+                                  style={{
+                                    fontSize: 35,
+
+                                    color: "white",
+                                    position: "absolute",
+                                    bottom: 10,
+                                    left: 20,
+                                  }}
+                                >
                                   Portrait
-                                </h3>
+                                </div>
                               </div>
                             </div>
                           </Link>
@@ -161,9 +170,18 @@ export default function Collection(props) {
                               }}
                             >
                               <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                <div
+                                  style={{
+                                    fontSize: 35,
+
+                                    color: "white",
+                                    position: "absolute",
+                                    bottom: 10,
+                                    left: 20,
+                                  }}
+                                >
                                   Toronto
-                                </h3>
+                                </div>
                               </div>
                             </div>
                           </Link>
@@ -191,9 +209,18 @@ export default function Collection(props) {
                               }}
                             >
                               <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                <div
+                                  style={{
+                                    fontSize: 35,
+
+                                    color: "white",
+                                    position: "absolute",
+                                    bottom: 10,
+                                    left: 20,
+                                  }}
+                                >
                                   Banff
-                                </h3>
+                                </div>
                               </div>
                             </div>
                           </Link>
@@ -212,9 +239,18 @@ export default function Collection(props) {
                               }}
                             >
                               <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
+                                <div
+                                  style={{
+                                    fontSize: 35,
+
+                                    color: "white",
+                                    position: "absolute",
+                                    bottom: 10,
+                                    left: 20,
+                                  }}
+                                >
                                   Landscape
-                                </h3>
+                                </div>
                               </div>
                             </div>
                           </Link>
@@ -240,11 +276,18 @@ export default function Collection(props) {
                                 }}
                               >
                                 <div className="image-tile">
-                                  <h3
-                                    style={{ marginLeft: 15, color: "white" }}
+                                  <div
+                                    style={{
+                                      fontSize: 35,
+
+                                      color: "white",
+                                      position: "absolute",
+                                      bottom: 10,
+                                      left: 20,
+                                    }}
                                   >
                                     Portrait
-                                  </h3>
+                                  </div>
                                 </div>
                               </div>
                             </Link>
@@ -263,11 +306,18 @@ export default function Collection(props) {
                                 }}
                               >
                                 <div className="image-tile">
-                                  <h3
-                                    style={{ marginLeft: 15, color: "white" }}
+                                  <div
+                                    style={{
+                                      fontSize: 35,
+
+                                      color: "white",
+                                      position: "absolute",
+                                      bottom: 10,
+                                      left: 20,
+                                    }}
                                   >
                                     Toronto
-                                  </h3>
+                                  </div>
                                 </div>
                               </div>
                             </Link>
@@ -291,11 +341,18 @@ export default function Collection(props) {
                                 }}
                               >
                                 <div className="image-tile">
-                                  <h3
-                                    style={{ marginLeft: 15, color: "white" }}
+                                  <div
+                                    style={{
+                                      fontSize: 35,
+
+                                      color: "white",
+                                      position: "absolute",
+                                      bottom: 10,
+                                      left: 20,
+                                    }}
                                   >
                                     Banff
-                                  </h3>
+                                  </div>
                                 </div>
                               </div>
                             </Link>
@@ -314,11 +371,18 @@ export default function Collection(props) {
                                 }}
                               >
                                 <div className="image-tile">
-                                  <h3
-                                    style={{ marginLeft: 15, color: "white" }}
+                                  <div
+                                    style={{
+                                      fontSize: 35,
+
+                                      color: "white",
+                                      position: "absolute",
+                                      bottom: 10,
+                                      left: 20,
+                                    }}
                                   >
                                     Landscape
-                                  </h3>
+                                  </div>
                                 </div>
                               </div>
                             </Link>
