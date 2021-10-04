@@ -128,7 +128,7 @@ export default function Collection(props) {
                     <Fade opposite>
                       <Row>
                         <Col>
-                          <Link to="/">
+                          <Link to="/portrait">
                             <div
                               style={{
                                 backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
@@ -264,7 +264,7 @@ export default function Collection(props) {
                       <Fade opposite>
                         <Row>
                           <Col lg={6} style={{ marginBottom: 30 }}>
-                            <Link to="/">
+                            <Link to="/portrait">
                               <div
                                 style={{
                                   backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
