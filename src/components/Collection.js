@@ -29,7 +29,7 @@ export default function Collection(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 1800);
+      }, 2200);
     }
   };
 
