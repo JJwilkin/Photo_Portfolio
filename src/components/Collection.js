@@ -20,16 +20,16 @@ export default function Collection(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
-  const counter = useRef(13);
+  const counter = useRef(1);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 13) {
+    if (counter.current >= 0) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 2100);
+      }, 2500);
     }
   };
 
