@@ -29,7 +29,7 @@ export default function Collection(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 1500);
+      }, 1800);
     }
   };
 
@@ -37,11 +37,12 @@ export default function Collection(props) {
     let img1 = new Image();
     let img2 = new Image();
     let img3 = new Image();
-    let img4= new Image();
-    img1.src=`url(${"./assets/portrait/stu.jpg"})`;
-    img2.src=`url(${"./assets/toronto/toronto11.jpg"})`;
-    img3.src=`url(${"./assets/landscape/DSC_2083-2.jpg"})`;
-    img4.src=`url(${"./assets/banff/blueMountain.jpg"})`;
+    let img4 = new Image();
+    img1.src = `url(${"./assets/portrait/stu.jpg"})`;
+    img2.src = `url(${"./assets/toronto/toronto11.jpg"})`;
+    img3.src = `url(${"./assets/landscape/DSC_2083-2.jpg"})`;
+    img4.src = `url(${"./assets/banff/blueMountain.jpg"})`;
+    
     imageLoaded();
   }, []);
 
@@ -133,9 +134,10 @@ export default function Collection(props) {
                       marginBottom: 30,
                     }}
                   >
-                    <Fade opposite>
-                      <Row>
+                    <Row>
+                     
                         <Col>
+                        <Fade opposite>
                           <Link to="/portrait">
                             <div
                               style={{
@@ -163,9 +165,12 @@ export default function Collection(props) {
                               </div>
                             </div>
                           </Link>
+                          </Fade>
                         </Col>
-
+                      
+                      
                         <Col>
+                        <Fade opposite>
                           <Link to="/toronto">
                             <div
                               style={{
@@ -193,18 +198,20 @@ export default function Collection(props) {
                               </div>
                             </div>
                           </Link>
+                          </Fade>
                         </Col>
-                      </Row>
-                    </Fade>
+                      
+                    </Row>
                   </div>
                   <div
                     style={{
                       display: desktop ? "block" : "none",
                     }}
                   >
-                    <Fade opposite>
-                      <Row>
+                    <Row>
+                      
                         <Col style={{ marginBottom: 30 }}>
+                        <Fade opposite>
                           <Link to="/banff">
                             <div
                               style={{
@@ -232,9 +239,12 @@ export default function Collection(props) {
                               </div>
                             </div>
                           </Link>
+                          </Fade>
                         </Col>
-
+                      
+                      
                         <Col style={{ marginBottom: 30 }}>
+                        <Fade opposite>
                           <Link to="/landscape">
                             <div
                               style={{
@@ -262,16 +272,18 @@ export default function Collection(props) {
                               </div>
                             </div>
                           </Link>
+                          </Fade>
                         </Col>
-                      </Row>
-                    </Fade>
+                      
+                    </Row>
                   </div>
 
                   <div style={{ display: desktop ? "none" : "block" }}>
                     <div>
-                      <Fade opposite>
+                      
                         <Row>
                           <Col lg={6} style={{ marginBottom: 30 }}>
+                          <Fade opposite>
                             <Link to="/portrait">
                               <div
                                 style={{
@@ -299,9 +311,11 @@ export default function Collection(props) {
                                 </div>
                               </div>
                             </Link>
+                            </Fade>
                           </Col>
 
                           <Col lg={6} style={{ marginBottom: 30 }}>
+                          <Fade opposite>
                             <Link to="/toronto">
                               <div
                                 style={{
@@ -329,14 +343,16 @@ export default function Collection(props) {
                                 </div>
                               </div>
                             </Link>
+                            </Fade>
                           </Col>
                         </Row>
-                      </Fade>
+                      
                     </div>
                     <div>
-                      <Fade opposite>
+                      
                         <Row>
                           <Col lg={6} style={{ marginBottom: 30 }}>
+                          <Fade opposite>
                             <Link to="/banff">
                               <div
                                 style={{
@@ -364,9 +380,11 @@ export default function Collection(props) {
                                 </div>
                               </div>
                             </Link>
+                            </Fade>
                           </Col>
 
                           <Col lg={6} style={{ marginBottom: 30 }}>
+                          <Fade opposite>
                             <Link to="/landscape">
                               <div
                                 style={{
@@ -394,9 +412,10 @@ export default function Collection(props) {
                                 </div>
                               </div>
                             </Link>
+                            </Fade>
                           </Col>
                         </Row>
-                      </Fade>
+                     
                     </div>
                   </div>
                 </div>
