@@ -80,20 +80,21 @@ export default function Landscape(props) {
                   </div>
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
-                  <PageTitleDescription
-                    title="LANDSCAPE"
-                    description='"Landscape photography is the supreme test of the photographer - and often the supreme disappointment."'
-                    author="- Ansel Adams"
-                      style={{ display: loading ? "none" : "block" }}
-                  />
                   
-                  <div style={{ display: desktop ? "block" : "none" }}>
+                  
+                  <div className={{ display: desktop ? "block" : "none" , maxWidth:300}}>
                       <SingleImage
                         image="./assets/landscape/DSC_2145-2.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
+                      <PageTitleDescription
+                    title="LANDSCAPE"
+                    description='"Landscape photography is the supreme test of the photographer - and often the supreme disappointment."'
+                    author="- Ansel Adams"
+                      style={{ display: loading ? "none" : "block" }}
+                  />
                       <TwoImages
                         images={["./assets/landscape/DSC_2078.jpg", "./assets/landscape/DSC_2087.jpg"]}
                         dimensions={[1, 5, 1, 5]}
@@ -237,4 +238,11 @@ export default function Landscape(props) {
       </Container>
     </div>
   );
+}
+
+
+let styles = {
+  imageSection: {
+    maxWidth: 800
+  }
 }

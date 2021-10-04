@@ -116,6 +116,34 @@ export default function Menu(props) {
                 </td>
               </Link>
             </tr>
+            <tr>
+              <Link
+                to="/collections"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("collections");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col ${
+                    selectedOption == "collections" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  &#10230;
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "collections" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    ALL COLLECTIONS
+                  </h6>
+                </td>
+              </Link>
+            </tr>
           </table>
         </div>
 

@@ -1,0 +1,26 @@
+.image-tile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+    padding-left: 15;
+    background-color: rgba(0,0,0,0.25);
+    /* opacity: 0.8;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out; */
+
+    
+    transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -webkit-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+}
+
+.image-tile:hover{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.05);
+}
+

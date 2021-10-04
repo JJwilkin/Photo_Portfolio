@@ -8,6 +8,7 @@ import "../stylesheets/Hamburger.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage.js";
 import Toronto from "./Toronto.js";
+import Collection from "./Collection.js";
 import Landscape from "./Landscape.js";
 import ScrollToTop from "./ScrollToTop";
 import About from "./About";
@@ -79,6 +80,13 @@ function App() {
         </Route>
         <Route exact path="/toronto">
           <Toronto
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
+        </Route>
+        <Route exact path="/collections">
+          <Collection
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
