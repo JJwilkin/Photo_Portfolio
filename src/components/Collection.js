@@ -87,10 +87,19 @@ export default function Collection(props) {
                 <div
                   style={{
                     display: loading ? "none" : "block",
-                    marginTop: desktop ? "15vh" :"10vh",
+                    marginTop: desktop ? "15vh" : "10vh",
                   }}
                 >
-                <h1 style={styles.title}> Collections </h1>
+                  <h1
+                    style={{
+                      textAlign: desktop ? "center" : "left",
+                      fontWeight: 500,
+                      marginBottom: 20,
+                    }}
+                  >
+                    {" "}
+                    Collections{" "}
+                  </h1>
                   <div
                     style={{
                       display: desktop ? "block" : "none",
@@ -146,12 +155,11 @@ export default function Collection(props) {
                   <div
                     style={{
                       display: desktop ? "block" : "none",
-                      marginBottom: 30,
                     }}
                   >
                     <Fade opposite>
                       <Row>
-                        <Col>
+                        <Col style={{ marginBottom: 30 }}>
                           <Link to="/banff">
                             <div
                               style={{
@@ -172,7 +180,7 @@ export default function Collection(props) {
                           </Link>
                         </Col>
 
-                        <Col>
+                        <Col style={{ marginBottom: 30 }}>
                           <Link to="/landscape">
                             <div
                               style={{
@@ -197,57 +205,61 @@ export default function Collection(props) {
                   </div>
 
                   <div style={{ display: desktop ? "none" : "block" }}>
-                    <div style={{ marginBottom: 30 }}>
-                      <Fade opposite>
-                      <Row>
-                        <Col>
-                          <Link to="/">
-                            <div
-                              style={{
-                                backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
-                            >
-                              <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
-                                  Portrait
-                                </h3>
-                              </div>
-                            </div>
-                          </Link>
-                        </Col>
-
-                        <Col>
-                          <Link to="/toronto">
-                            <div
-                              style={{
-                                backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
-                            >
-                              <div className="image-tile">
-                                <h3 style={{ marginLeft: 15, color: "white" }}>
-                                  Toronto
-                                </h3>
-                              </div>
-                            </div>
-                          </Link>
-                        </Col>
-                      </Row>
-                      </Fade>
-                    </div>
-                    <div style={{ marginBottom: 20 }}>
+                    <div>
                       <Fade opposite>
                         <Row>
-                          <Col>
+                          <Col lg={6} style={{ marginBottom: 30 }}>
+                            <Link to="/">
+                              <div
+                                style={{
+                                  backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
+                                  backgroundPosition: "center",
+                                  backgroundSize: "cover",
+                                  backgroundRepeat: "no-repeat",
+                                  width: "100%",
+                                  height: "30vh",
+                                }}
+                              >
+                                <div className="image-tile">
+                                  <h3
+                                    style={{ marginLeft: 15, color: "white" }}
+                                  >
+                                    Portrait
+                                  </h3>
+                                </div>
+                              </div>
+                            </Link>
+                          </Col>
+
+                          <Col lg={6} style={{ marginBottom: 30 }}>
+                            <Link to="/toronto">
+                              <div
+                                style={{
+                                  backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
+                                  backgroundPosition: "center",
+                                  backgroundSize: "cover",
+                                  backgroundRepeat: "no-repeat",
+                                  width: "100%",
+                                  height: "30vh",
+                                }}
+                              >
+                                <div className="image-tile">
+                                  <h3
+                                    style={{ marginLeft: 15, color: "white" }}
+                                  >
+                                    Toronto
+                                  </h3>
+                                </div>
+                              </div>
+                            </Link>
+                          </Col>
+                        </Row>
+                      </Fade>
+                    </div>
+                    <div>
+                      <Fade opposite>
+                        <Row>
+                          <Col lg={6} style={{ marginBottom: 30 }}>
                             <Link to="/banff">
                               <div
                                 style={{
@@ -270,7 +282,7 @@ export default function Collection(props) {
                             </Link>
                           </Col>
 
-                          <Col>
+                          <Col lg={6} style={{ marginBottom: 30 }}>
                             <Link to="/landscape">
                               <div
                                 style={{
@@ -318,12 +330,4 @@ export default function Collection(props) {
       </Container>
     </div>
   );
-}
-
-const styles = {
-    title: {
-        fontWeight: 500,
-        marginBottom:20,
-        textAlign: 'center'
-    }
 }

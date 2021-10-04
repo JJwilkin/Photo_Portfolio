@@ -1,21 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Menu from "./Menu";
 import "../stylesheets/App.css";
 import "../stylesheets/HomePage.css";
 import "../stylesheets/PicturePage.css";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 import PageTitleDescription from "./PageTitleDescription";
-import Menu from "./Menu";
 import RightMenu from "./RightMenu";
 import SingleImage from "./SingleImage";
 import TwoImages from "./TwoImages";
 import LoadingAnimation from "./LoadingAnimation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
 
-export default function Landscape(props) {
+export default function Toronto(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
@@ -80,16 +80,15 @@ export default function Landscape(props) {
                   </div>
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
-                  
-                  
-                  <div className={{ display: desktop ? "block" : "none" }}>
-                  
-                  <PageTitleDescription
+                <PageTitleDescription
                     title="LANDSCAPE"
                     description='"Landscape photography is the supreme test of the photographer - and often the supreme disappointment."'
                     author="- Ansel Adams"
                       style={{ display: loading ? "none" : "block" }}
                   />
+
+                  <div style={{ display: desktop ? "block" : "none" }}>
+                  
                       <SingleImage
                         image="./assets/landscape/DSC_2145-2.jpg"
                         dimensions={[2, 8, 2]}
@@ -146,10 +145,10 @@ export default function Landscape(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
-                    </div>
-                  
-                    <div style={{ display: desktop ? "none" : "block" }}> 
-                      <SingleImage
+                  </div>
+
+                  <div style={{ display: desktop ? "none" : "block" }}>
+                  <SingleImage
                         image="./assets/landscape/DSC_2145-2.jpg"
                         dimensions={[2, 9, 1]}
                         position={1}
@@ -222,8 +221,7 @@ export default function Landscape(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
-                    </div>
-                  
+                  </div>
                 </div>
               </Col>
             </Row>
@@ -234,17 +232,12 @@ export default function Landscape(props) {
         </Row>
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
-            {desktop ? null : <MobileBottomNav name="Banff" route="/banff" />}
+            {desktop ? null : (
+              <MobileBottomNav name="Banff" route="/banff" />
+            )}
           </Col>
         </Row>
       </Container>
     </div>
   );
-}
-
-
-let styles = {
-  imageSection: {
-    maxWidth: 800
-  }
 }
