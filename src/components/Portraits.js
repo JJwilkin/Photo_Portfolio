@@ -89,7 +89,7 @@ export default function Portraits(props) {
                     <div style={{ display: desktop ? "block" : "none" }}>
                       <SingleImage
                         image="./assets/portrait/stu.jpg"
-                        dimensions={[2, 9, 1]}
+                        dimensions={[2, 8, 2]}
                         position={1}
                         onLoad={imageLoaded}
                       />

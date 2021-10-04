@@ -21,7 +21,7 @@ export default function Menu(props) {
             className="logo"
             onClick={() => {
               if (!desktop) {
-                setOption("portrait");
+                setOption("collections");
                 setShowMenu(false);
               }
             }}
@@ -34,7 +34,7 @@ export default function Menu(props) {
           <table>
             <tr>
               <Link
-                to="/"
+                to="/portrait"
                 onClick={() => {
                   if (!desktop) {
                     setOption("portrait");
@@ -146,7 +146,7 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
-                to="/collections"
+                to="/"
                 onClick={() => {
                   if (!desktop) {
                     setOption("collections");

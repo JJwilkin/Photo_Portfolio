@@ -66,6 +66,13 @@ function App() {
 
       <Switch>
         <Route exact path="/">
+          <Collection
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
+        </Route>
+        <Route exact path="/portrait">
           <Portraits
             showFade={showFade}
             setShowFade={setShowFade}
@@ -88,13 +95,6 @@ function App() {
         </Route>
         <Route exact path="/banff">
           <Banff
-            showFade={showFade}
-            setShowFade={setShowFade}
-            showMenu={showMenu}
-          />
-        </Route>
-        <Route exact path="/collections">
-          <Collection
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}

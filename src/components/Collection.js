@@ -29,7 +29,7 @@ export default function Collection(props) {
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 2500);
+      }, 2600);
     }
   };
 
@@ -90,16 +90,35 @@ export default function Collection(props) {
                     marginTop: desktop ? "15vh" : "10vh",
                   }}
                 >
-                  <h1
-                    style={{
-                      textAlign: desktop ? "center" : "left",
-                      fontWeight: 500,
-                      marginBottom: 20,
-                    }}
-                  >
-                    {" "}
-                    Collections{" "}
-                  </h1>
+                  <Fade bottom>
+                    <h1
+                      style={{
+                        textAlign: "left",
+
+                        marginBottom: 5,
+                      }}
+                    >
+                      {" "}
+                      Hey, I'm Josh 👋{" "}
+                    </h1>
+                    <p style={{ marginBottom: 20, fontSize: 18 }}>
+                      Welcome to my portfolio! I'm a Toronto based photographer
+                      with a passion for capturing beauty in people and
+                      nature; using pictures to tell their story.{" "}
+                    </p>
+                    <Link to="/contact">
+                      <p
+                        style={{
+                          textAlign: "left",
+                          marginTop: 20,
+                          marginBottom: 30,
+                          textDecoration:'underline'
+                        }}
+                      >
+                        Contact Me +
+                      </p>
+                    </Link>
+                  </Fade>
                   <div
                     style={{
                       display: desktop ? "block" : "none",
@@ -316,14 +335,6 @@ export default function Collection(props) {
           <Col lg={1}>
             {!desktop ? null : (
               <RightMenu showFade={showFade} setShowFade={setShowFade} />
-            )}
-          </Col>
-        </Row>
-
-        <Row style={loading ? { display: "none" } : null}>
-          <Col lg={12}>
-            {desktop ? null : (
-              <MobileBottomNav name="Landscape" route="/landscape" />
             )}
           </Col>
         </Row>
