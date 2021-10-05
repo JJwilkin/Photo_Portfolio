@@ -26,7 +26,7 @@ export default function Menu(props) {
               }
             }}
           >
-            Josh
+            Joshua.
           </h2>
         </Link>
 

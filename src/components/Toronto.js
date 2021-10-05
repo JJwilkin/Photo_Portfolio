@@ -49,7 +49,7 @@ export default function Toronto(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      Josh
+                      Joshua.
                     </h2>
                   </Link>
                 </Fade>
