@@ -86,7 +86,7 @@ export default function Contact(props) {
                       <Col className="contact-card" lg={4}>
                         <Fade bottom>
                           <p className="right-align remove-margin">CONTACT</p>
-                          <h1 className="right-align">Joshua Wilkinson</h1>
+                          <h1 className="right-align">Josh</h1>
                           {/* <h3 className="left-align">Let's collaborate</h3> */}
                           <div>
                             <p className="right-align small-margin small-text">
