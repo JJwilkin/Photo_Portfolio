@@ -26,7 +26,7 @@ export default function Menu(props) {
               }
             }}
           >
-            Joshua.
+            Joshua Wilkinson
           </h2>
         </Link>
 

@@ -63,7 +63,7 @@ export default function Collection(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      Joshua.
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>

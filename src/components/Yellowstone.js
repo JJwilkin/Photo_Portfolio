@@ -49,7 +49,7 @@ export default function Yellowstone(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      Joshua.
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>

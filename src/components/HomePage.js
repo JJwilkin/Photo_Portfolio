@@ -16,7 +16,7 @@ export default function HomePage() {
           <Col lg={2}>
             <div className="menu">
               <Fade bottom>
-                <h2 className="logo">Joshua.</h2>
+                <h2 className="logo">Joshua Wilkinson</h2>
               </Fade>
               <Fade bottom cascade>
                 <div>
