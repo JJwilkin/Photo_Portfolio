@@ -23,28 +23,28 @@ export default function Collection(props) {
   const counter = useRef(1);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 0) {
+    if (counter.current >= 4) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
           setLoading(false);
         }, 300);
-      }, 2200);
+      }, 1300);
     }
   };
 
-  useEffect(() => {
-    let img1 = new Image();
-    let img2 = new Image();
-    let img3 = new Image();
-    let img4 = new Image();
-    img1.src = `url(${"./assets/portrait/stu.jpg"})`;
-    img2.src = `url(${"./assets/toronto/toronto11.jpg"})`;
-    img3.src = `url(${"./assets/landscape/DSC_2083-2.jpg"})`;
-    img4.src = `url(${"./assets/banff/blueMountain.jpg"})`;
-    
-    imageLoaded();
-  }, []);
+  // useEffect(() => {
+  //   let img1 = new Image();
+  //   let img2 = new Image();
+  //   let img3 = new Image();
+  //   let img4 = new Image();
+  //   img1.src = `url(${"./assets/portrait/stu.jpg"})`;
+  //   img2.src = `url(${"./assets/toronto/toronto11.jpg"})`;
+  //   img3.src = `url(${"./assets/landscape/DSC_2083-2.jpg"})`;
+  //   img4.src = `url(${"./assets/banff/blueMountain.jpg"})`;
+
+  //   imageLoaded();
+  // }, []);
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -135,20 +135,10 @@ export default function Collection(props) {
                     }}
                   >
                     <Row>
-                     
-                        <Col>
+                      <Col>
                         <Fade opposite>
                           <Link to="/portrait">
-                            <div
-                              style={{
-                                backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
-                            >
+                            <div>
                               <div className="image-tile">
                                 <div
                                   style={{
@@ -162,25 +152,26 @@ export default function Collection(props) {
                                 >
                                   Portrait
                                 </div>
+                                <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/portrait/stu.jpg"
+                                  alt="portrait"
+                                />
                               </div>
                             </div>
                           </Link>
-                          </Fade>
-                        </Col>
-                      
-                      
-                        <Col>
+                        </Fade>
+                      </Col>
+
+                      <Col>
                         <Fade opposite>
                           <Link to="/toronto">
                             <div
-                              style={{
-                                backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
                             >
                               <div className="image-tile">
                                 <div
@@ -195,12 +186,21 @@ export default function Collection(props) {
                                 >
                                   Toronto
                                 </div>
+                                <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/toronto/toronto11.jpg"
+                                  alt="toronto"
+                                />
                               </div>
                             </div>
                           </Link>
-                          </Fade>
-                        </Col>
-                      
+                        </Fade>
+                      </Col>
                     </Row>
                   </div>
                   <div
@@ -209,19 +209,11 @@ export default function Collection(props) {
                     }}
                   >
                     <Row>
-                      
-                        <Col style={{ marginBottom: 30 }}>
+                      <Col style={{ marginBottom: 30 }}>
                         <Fade opposite>
                           <Link to="/banff">
                             <div
-                              style={{
-                                backgroundImage: `url(${"./assets/banff/blueMountain.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
+                             
                             >
                               <div className="image-tile">
                                 <div
@@ -236,25 +228,27 @@ export default function Collection(props) {
                                 >
                                   Banff
                                 </div>
+                                <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/banff/blueMountain.jpg"
+                                  alt="banff"
+                                />
                               </div>
                             </div>
                           </Link>
-                          </Fade>
-                        </Col>
-                      
-                      
-                        <Col style={{ marginBottom: 30 }}>
+                        </Fade>
+                      </Col>
+
+                      <Col style={{ marginBottom: 30 }}>
                         <Fade opposite>
                           <Link to="/yellowstone">
                             <div
-                              style={{
-                                backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                width: "100%",
-                                height: "30vh",
-                              }}
+
                             >
                               <div className="image-tile">
                                 <div
@@ -269,31 +263,32 @@ export default function Collection(props) {
                                 >
                                   Yellowstone
                                 </div>
+                                <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/landscape/DSC_2083-2.jpg"
+                                  alt="Yellowstone"
+                                />
                               </div>
                             </div>
                           </Link>
-                          </Fade>
-                        </Col>
-                      
+                        </Fade>
+                      </Col>
                     </Row>
                   </div>
 
                   <div style={{ display: desktop ? "none" : "block" }}>
                     <div>
-                      
-                        <Row>
-                          <Col lg={6} style={{ marginBottom: 30 }}>
+                      <Row>
+                        <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
                             <Link to="/portrait">
                               <div
-                                style={{
-                                  backgroundImage: `url(${"./assets/portrait/stu.jpg"})`,
-                                  backgroundPosition: "center",
-                                  backgroundSize: "cover",
-                                  backgroundRepeat: "no-repeat",
-                                  width: "100%",
-                                  height: "30vh",
-                                }}
+                                
                               >
                                 <div className="image-tile">
                                   <div
@@ -308,24 +303,27 @@ export default function Collection(props) {
                                   >
                                     Portrait
                                   </div>
+                                  <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/portrait/stu.jpg"
+                                  alt="portrait"
+                                />
                                 </div>
                               </div>
                             </Link>
-                            </Fade>
-                          </Col>
+                          </Fade>
+                        </Col>
 
-                          <Col lg={6} style={{ marginBottom: 30 }}>
+                        <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
                             <Link to="/toronto">
                               <div
-                                style={{
-                                  backgroundImage: `url(${"./assets/toronto/toronto11.jpg"})`,
-                                  backgroundPosition: "center",
-                                  backgroundSize: "cover",
-                                  backgroundRepeat: "no-repeat",
-                                  width: "100%",
-                                  height: "30vh",
-                                }}
+                             
                               >
                                 <div className="image-tile">
                                   <div
@@ -340,29 +338,30 @@ export default function Collection(props) {
                                   >
                                     Toronto
                                   </div>
+                                  <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/toronto/toronto11.jpg"
+                                  alt="toronto"
+                                />
                                 </div>
                               </div>
                             </Link>
-                            </Fade>
-                          </Col>
-                        </Row>
-                      
+                          </Fade>
+                        </Col>
+                      </Row>
                     </div>
                     <div>
-                      
-                        <Row>
-                          <Col lg={6} style={{ marginBottom: 30 }}>
+                      <Row>
+                        <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
                             <Link to="/banff">
                               <div
-                                style={{
-                                  backgroundImage: `url(${"./assets/banff/blueMountain.jpg"})`,
-                                  backgroundPosition: "center",
-                                  backgroundSize: "cover",
-                                  backgroundRepeat: "no-repeat",
-                                  width: "100%",
-                                  height: "30vh",
-                                }}
+                              
                               >
                                 <div className="image-tile">
                                   <div
@@ -377,24 +376,27 @@ export default function Collection(props) {
                                   >
                                     Banff
                                   </div>
+                                  <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/banff/blueMountain.jpg"
+                                  alt="banff"
+                                />
                                 </div>
                               </div>
                             </Link>
-                            </Fade>
-                          </Col>
+                          </Fade>
+                        </Col>
 
-                          <Col lg={6} style={{ marginBottom: 30 }}>
+                        <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
                             <Link to="/yellowstone">
                               <div
-                                style={{
-                                  backgroundImage: `url(${"./assets/landscape/DSC_2083-2.jpg"})`,
-                                  backgroundPosition: "center",
-                                  backgroundSize: "cover",
-                                  backgroundRepeat: "no-repeat",
-                                  width: "100%",
-                                  height: "30vh",
-                                }}
+                               
                               >
                                 <div className="image-tile">
                                   <div
@@ -409,13 +411,22 @@ export default function Collection(props) {
                                   >
                                     Yellowstone
                                   </div>
+                                  <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit:'cover'
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/landscape/DSC_2083-2.jpg"
+                                  alt="Yellowstone"
+                                />
                                 </div>
                               </div>
                             </Link>
-                            </Fade>
-                          </Col>
-                        </Row>
-                     
+                          </Fade>
+                        </Col>
+                      </Row>
                     </div>
                   </div>
                 </div>
