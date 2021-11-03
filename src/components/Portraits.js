@@ -22,7 +22,7 @@ export default function Portraits(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 14) {
+    if (counter.current >= 16) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
@@ -105,6 +105,12 @@ export default function Portraits(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
+                      <TwoImages
+                        images={["./assets/portrait/noah1.jpg", "./assets/portrait/noah2.jpg"]}
+                        dimensions={[1, 5, 1, 5]}
+                        positions={[1, 3]}
+                        onLoad={imageLoaded}
+                      />
                       <SingleImage
                         image="./assets/portrait/hooman-min.jpg"
                         dimensions={[5, 6, 1]}
@@ -171,6 +177,18 @@ export default function Portraits(props) {
                       />
                       <SingleImage
                         image="./assets/portrait/jd-min.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/noah1.jpg"
+                        dimensions={[1, 5, 6]}
+                        position={1}
+                        onLoad={imageLoaded}
+                      />
+                      <SingleImage
+                        image="./assets/portrait/noah2.jpg"
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
