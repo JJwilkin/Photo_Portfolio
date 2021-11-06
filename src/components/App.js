@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./Menu.js";
 import Portraits from "./Portraits";
+import Wedding from "./Wedding";
 
 import { createBrowserHistory } from "history";
 import "../stylesheets/App.css";
@@ -67,6 +68,13 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Collection
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
+        </Route>
+        <Route exact path="/weddings">
+          <Wedding
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}

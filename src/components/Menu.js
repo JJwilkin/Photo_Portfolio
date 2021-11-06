@@ -32,6 +32,34 @@ export default function Menu(props) {
 
         <div>
           <table>
+          <tr>
+              <Link
+                to="/weddings"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("weddings");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col ${
+                    selectedOption == "weddings" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  01
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "weddings" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    WEDDINGS
+                  </h6>
+                </td>
+              </Link>
+            </tr>
             <tr>
               <Link
                 to="/portrait"
@@ -47,7 +75,7 @@ export default function Menu(props) {
                     selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
-                  01
+                  02
                 </td>
                 <td>
                   <h6
@@ -75,7 +103,7 @@ export default function Menu(props) {
                     selectedOption == "toronto" ? "active-link" : "dim-text"
                   }`}
                 >
-                  02
+                  03
                 </td>
                 <td>
                   <h6
@@ -103,7 +131,7 @@ export default function Menu(props) {
                     selectedOption == "yellowstone" ? "active-link" : "dim-text"
                   }`}
                 >
-                  03
+                  04
                 </td>
                 <td>
                   <h6
@@ -131,7 +159,7 @@ export default function Menu(props) {
                     selectedOption == "banff" ? "active-link" : "dim-text"
                   }`}
                 >
-                  04
+                  05
                 </td>
                 <td>
                   <h6

@@ -137,6 +137,38 @@ export default function Collection(props) {
                     <Row>
                       <Col>
                         <Fade opposite>
+                          <Link to="/weddings">
+                            <div>
+                              <div className="image-tile">
+                                <div
+                                  style={{
+                                    fontSize: 30,
+
+                                    color: "white",
+                                    position: "absolute",
+                                    bottom: 10,
+                                    left: 20,
+                                  }}
+                                >
+                                  Weddings
+                                </div>
+                                <img
+                                  style={{
+                                    width: "100%",
+                                    height: "30vh",
+                                    objectFit: "cover",
+                                  }}
+                                  onLoad={imageLoaded}
+                                  src="./assets/wedding/DSC_5740-2.jpg"
+                                  alt="wedding"
+                                />
+                              </div>
+                            </div>
+                          </Link>
+                        </Fade>
+                      </Col>
+                      <Col>
+                        <Fade opposite>
                           <Link to="/portrait">
                             <div>
                               <div className="image-tile">
@@ -168,7 +200,16 @@ export default function Collection(props) {
                         </Fade>
                       </Col>
 
-                      <Col>
+                      
+                    </Row>
+                  </div>
+                  <div
+                    style={{
+                      display: desktop ? "block" : "none",
+                    }}
+                  >
+                    <Row>
+                    <Col>
                         <Fade opposite>
                           <Link to="/toronto">
                             <div>
@@ -200,14 +241,6 @@ export default function Collection(props) {
                           </Link>
                         </Fade>
                       </Col>
-                    </Row>
-                  </div>
-                  <div
-                    style={{
-                      display: desktop ? "block" : "none",
-                    }}
-                  >
-                    <Row>
                       <Col style={{ marginBottom: 30 }}>
                         <Fade opposite>
                           <Link to="/banff">
@@ -279,6 +312,38 @@ export default function Collection(props) {
                   <div style={{ display: desktop ? "none" : "block" }}>
                     <div>
                       <Row>
+                      <Col lg={6} style={{ marginBottom: 30 }}>
+                          <Fade opposite>
+                            <Link to="/wedding">
+                              <div>
+                                <div className="image-tile">
+                                  <div
+                                    style={{
+                                      fontSize: 25,
+
+                                      color: "white",
+                                      position: "absolute",
+                                      bottom: 10,
+                                      left: 20,
+                                    }}
+                                  >
+                                    Weddings
+                                  </div>
+                                  <img
+                                    style={{
+                                      width: "100%",
+                                      height: "30vh",
+                                      objectFit: "cover",
+                                    }}
+                                    onLoad={imageLoaded}
+                                    src="./assets/wedding/DSC_5740-2.jpg"
+                                    alt="weddings"
+                                  />
+                                </div>
+                              </div>
+                            </Link>
+                          </Fade>
+                        </Col>
                         <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
                             <Link to="/portrait">
