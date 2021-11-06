@@ -27,7 +27,7 @@ export default function Wedding(props) {
   const counter = useRef(0);
   const imageLoaded = () => {
     counter.current += 1;
-    if (counter.current >= 16) {
+    if (counter.current >= 14) {
       setTimeout(() => {
         setShowFade(true);
         setTimeout(() => {
