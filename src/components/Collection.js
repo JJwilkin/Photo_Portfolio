@@ -314,7 +314,7 @@ export default function Collection(props) {
                       <Row>
                       <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
-                            <Link to="/wedding">
+                            <Link to="/weddings">
                               <div>
                                 <div className="image-tile">
                                   <div
