@@ -67,7 +67,7 @@ export default function Wedding(props) {
           <Col lg={1}>
             {desktop ? (
               <Menu
-                selectedOption="wedding"
+                selectedOption="weddings"
                 showFade={showFade}
                 setShowFade={setShowFade}
               />
@@ -108,7 +108,7 @@ export default function Wedding(props) {
                       />
                       <SingleImage
                         image={imageList[3]}
-                        dimensions={[3, 6, 3]}
+                        dimensions={[2, 8, 2]}
                         position={1}
                         onLoad={imageLoaded}
                       />
@@ -120,7 +120,7 @@ export default function Wedding(props) {
                       />
                       <SingleImage
                         image={imageList[6]}
-                        dimensions={[5, 6, 1]}
+                        dimensions={[4, 6, 2]}
                         position={1}
                         onLoad={imageLoaded}
                       />
@@ -139,13 +139,13 @@ export default function Wedding(props) {
                       />
                       <TwoImages
                         images={[imageList[10], imageList[11]]}
-                        dimensions={[1, 4, 1, 6]}
+                        dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
                         image={imageList[12]}
-                        dimensions={[2, 6, 4]}
+                        dimensions={[2, 7, 3]}
                         position={1}
                         onLoad={imageLoaded}
                       />
