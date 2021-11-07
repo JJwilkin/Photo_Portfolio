@@ -99,8 +99,8 @@ export default function Contact(props) {
                               </a>
                             </p>
                             <p className="right-align small-margin small-text">
-                              <b>Text</b> &nbsp;
-                              <a href="sms:6472194678">+1 (647) 219 4678</a>
+                              <b>Call</b> &nbsp;
+                              <a href="tel:6472194678">+1 (647) 219 4678</a>
                             </p>
                             <p className="right-align small-margin small-text">
                               <b>IG</b> &nbsp;
