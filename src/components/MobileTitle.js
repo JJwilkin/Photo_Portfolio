@@ -15,7 +15,7 @@ export default function MobileTitle(props) {
                 className="logo mobile-homepage-title"
                 style={{ textAlign: "right" }}
               >
-                jxshooter
+                Joshua Wilkinson
               </h2>
             </Fade>
           </div>

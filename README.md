@@ -1,2 +1,2 @@
 # Photo_Portfolio
-Live website: www.jxshooter.com
+Live website: www.joshuawilkinson-photography.com

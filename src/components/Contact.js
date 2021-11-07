@@ -41,7 +41,7 @@ export default function Contact(props) {
                       className="logo mobile-homepage-title"
                       style={{ textAlign: "right" }}
                     >
-                      jxshooter
+                      Joshua Wilkinson
                     </h2>
                   </Link>
                 </Fade>
@@ -93,9 +93,9 @@ export default function Contact(props) {
                               <b>Email</b> &nbsp;
                               <a
                                 target="_blank"
-                                href="mailto:jxshooter@outlook.com"
+                                href="mailto:joshjeffreywilkinson@gmail.com"
                               >
-                                jxshooter@outlook.com
+                                joshjeffreywilkinson@gmail.com
                               </a>
                             </p>
                             <p className="right-align small-margin small-text">
