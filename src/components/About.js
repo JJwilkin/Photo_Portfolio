@@ -83,7 +83,14 @@ export default function About(props) {
                   <div style={{ display: loading ? "none" : "block" }}>
                     <Row style={{ marginTop: 25 }}>
                       <Col></Col>
-
+                      <Col lg={4}>
+                        <img
+                          className="d-block w-100"
+                          src="./assets/joshua2.jpg"
+                          alt="First slide"
+                          onLoad={imageLoaded}
+                        />
+                      </Col>
                       <Col lg={6}>
                         <Fade bottom>
                           {/* <p className="left-align">About</p> */}
@@ -124,14 +131,7 @@ export default function About(props) {
                           <p>- Conrad Hall</p>
                         </Fade>
                       </Col>
-                      <Col lg={4}>
-                        <img
-                          className="d-block w-100"
-                          src="./assets/joshua2.jpg"
-                          alt="First slide"
-                          onLoad={imageLoaded}
-                        />
-                      </Col>
+                      
                       <Col></Col>
                     </Row>
                   </div>
