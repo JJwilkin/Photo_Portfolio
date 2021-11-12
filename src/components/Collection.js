@@ -96,10 +96,10 @@ export default function Collection(props) {
                 <div
                   style={{
                     display: loading ? "none" : "block",
-                    marginTop: desktop ? "20vh" : "10vh",
+                    marginTop: desktop ? "8vh" : "10vh",
                   }}
                 >
-                  {/* <Fade bottom>
+                  <Fade bottom>
                     <h3
                       style={{
                         textAlign: "left",
@@ -108,26 +108,41 @@ export default function Collection(props) {
                       }}
                     >
                       {" "}
-                      Hey, I'm Josh 👋{" "}
+                      Hey, I'm Josh !{" "}
                     </h3>
-                    <p style={{ marginBottom: 20, fontSize: 18 }}>
+                    <p style={{ marginBottom: 20, fontSize: 17 }}>
                       Welcome to my portfolio! I'm a Toronto based photographer
-                      with a passion for capturing beauty in people and nature;
-                      using pictures to tell their story.{" "}
+                      with a passion for capturing the beauty in people and nature;
+                      using my pictures to tell their story. Let's work together and capture memories!{" "}
                     </p>
+                    <div style={{display:'flex', justifyContent:"flex-start"}}>
                     <Link to="/contact">
                       <p
                         style={{
                           textAlign: "left",
-                          marginTop: 20,
-                          marginBottom: 30,
-                          textDecoration: "underline",
+                          marginTop: 10,
+                          marginRight: 30,
+                          textDecoration: "overline",
                         }}
                       >
-                        Contact Me +
+                        Contact
                       </p>
                     </Link>
-                  </Fade> */}
+                    <Link to="/about">
+                      <p
+                        style={{
+                          textAlign: "left",
+                          marginTop: 10,
+                          marginBottom: 30,
+                          textDecoration: "overline",
+                        }}
+                      >
+                        About
+                      </p>
+                    </Link>
+                      </div>
+                    
+                  </Fade>
                   <div
                     style={{
                       display: desktop ? "block" : "none",

@@ -89,20 +89,32 @@ export default function About(props) {
                           {/* <p className="left-align">About</p> */}
                           <h3 className="left-align">I'm Josh</h3>
                           <p className="left-align small-text">
-                            I "began" photography in Christmas of 2016 when I
+                            I "began" photography in the Christmas of 2015 at the age of 15 when I
                             got my first DSLR camera. It was a cheap Nikon with
                             a kit lens and I shot on Auto for the first 6
-                            months. My pictures were terrible. But despite that,
+                            months. My pictures were...interesting. But despite that,
                             I couldn't deny the satisfaction of capturing a
                             moment in time. Over the years, I learned new
-                            techniques (through youtube, trial and error, and
-                            other photographers) and in 2020 I began taking my
-                            photography seriously. I built this website from
-                            scratch (with the help and support of Aliya Rajwani)
+                            techniques, practiced on friends, learned theory, studied composition, and played with colors. 
+                            It was like a snowball, the more I learned the more I wanted to learn. 
+                            </p>
+
+                            <p className="left-align small-text">
+                            And after all these years I've learned as much about myself as I have about photography. Photography has taught me
+                            time and time again the importance of humility and nurturing the child-like curiosity to learn and take risks.
+                            Too often we fall into the "I've always done it this way" trap of thinking, and we stagnate. It's only when 
+                            we speak with a younger nephew, a toddler, or child that we are reminded of this burning curiosity we once had.
+                            That's just my two cents on all of this.
+                            </p>
+
+                            <p className="left-align small-text">
+                            
+                            Lastly some acknowledgements, I'm a softward developer by day and built this website from
+                            scratch with the help and support of my girlfriend Aliya. It was originally created
                             as a medium to document my journey through
-                            photography. Thank you if you read up to this far,
-                            and I hope you enjoy my work. Reach out to me and we
-                            can collaborate. Lastly, if I had to choose a quote
+                            photography but has since grown to so much more. Thank you for reading up to this far,
+                            and I hope my work brings you joy. Please feel free reach out to me over the phone or instagram and we
+                            can make some great work! Lastly, if I had to choose a quote
                             to describe how I view photography it would be this:
                           </p>
                           <p>
