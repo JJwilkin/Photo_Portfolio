@@ -261,7 +261,7 @@ export default function Wedding(props) {
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
             {desktop ? null : (
-              <MobileBottomNav name="Portrait" route="/portrait" />
+              <MobileBottomNav name="Families" route="/families" />
             )}
           </Col>
         </Row>
