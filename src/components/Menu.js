@@ -62,6 +62,34 @@ export default function Menu(props) {
             </tr>
             <tr>
               <Link
+                to="/families"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("families");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col ${
+                    selectedOption == "families" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  02
+                </td>
+                <td>
+                  <h6
+                    className={`${
+                      selectedOption == "families" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    FAMILIES
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link
                 to="/portrait"
                 onClick={() => {
                   if (!desktop) {
@@ -75,7 +103,7 @@ export default function Menu(props) {
                     selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
-                  02
+                  03
                 </td>
                 <td>
                   <h6
@@ -83,12 +111,12 @@ export default function Menu(props) {
                       selectedOption == "portrait" ? "active-link" : "dim-text"
                     }`}
                   >
-                    PORTRAIT
+                    PORTRAITS
                   </h6>
                 </td>
               </Link>
             </tr>
-            <tr>
+            {/* <tr>
               <Link
                 to="/toronto"
                 onClick={() => {
@@ -171,7 +199,7 @@ export default function Menu(props) {
                   </h6>
                 </td>
               </Link>
-            </tr>
+            </tr> */}
             <tr>
               <Link
                 to="/"

@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Menu from "./Menu.js";
 import Portraits from "./Portraits";
 import Wedding from "./Wedding";
-
+import Families from "./Families.js";
 import { createBrowserHistory } from "history";
 import "../stylesheets/App.css";
 import "../stylesheets/Hamburger.css";
@@ -75,6 +75,13 @@ function App() {
         </Route>
         <Route exact path="/weddings">
           <Wedding
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+          />
+        </Route>
+        <Route exact path="/families">
+          <Families
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
