@@ -111,9 +111,9 @@ export default function Collection(props) {
                       Hey, I'm Josh !{" "}
                     </h3>
                     <p style={{ marginBottom: 20, fontSize: 17 }}>
-                      Welcome to my portfolio! I'm a Toronto based photographer
+                      Welcome to my portfolio. I'm a Toronto based photographer
                       with a passion for capturing the beauty in people and nature;
-                      using my pictures to tell their story. Let's work together and capture memories!{" "}
+                      using my pictures to tell their story. Let's create together!{" "}
                     </p>
                     <div style={{display:'flex', justifyContent:"flex-start"}}>
                     <Link to="/contact">
