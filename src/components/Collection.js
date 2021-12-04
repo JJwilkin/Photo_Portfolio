@@ -150,9 +150,9 @@ export default function Collection(props) {
                     }}
                   >
                     <Row>
-                      <Col>
+                    <Col>
                         <Fade opposite>
-                          <Link to="/weddings">
+                          <Link to="/portrait">
                             <div>
                               <div className="image-tile">
                                 <div
@@ -165,7 +165,7 @@ export default function Collection(props) {
                                     left: 20,
                                   }}
                                 >
-                                  Weddings
+                                  Portrait
                                 </div>
                                 <img
                                   style={{
@@ -174,14 +174,15 @@ export default function Collection(props) {
                                     objectFit: "cover",
                                   }}
                                   onLoad={imageLoaded}
-                                  src="./assets/wedding/DSC_5740-2.jpg"
-                                  alt="wedding"
+                                  src="./assets/portrait/stu.jpg"
+                                  alt="portrait"
                                 />
                               </div>
                             </div>
                           </Link>
                         </Fade>
                       </Col>
+                      
                       <Col>
                         <Fade opposite>
                           <Link to="/families">
@@ -227,7 +228,7 @@ export default function Collection(props) {
                     <Row>
                     <Col>
                         <Fade opposite>
-                          <Link to="/portrait">
+                          <Link to="/weddings">
                             <div>
                               <div className="image-tile">
                                 <div
@@ -240,7 +241,7 @@ export default function Collection(props) {
                                     left: 20,
                                   }}
                                 >
-                                  Portrait
+                                  Weddings
                                 </div>
                                 <img
                                   style={{
@@ -249,8 +250,8 @@ export default function Collection(props) {
                                     objectFit: "cover",
                                   }}
                                   onLoad={imageLoaded}
-                                  src="./assets/portrait/stu.jpg"
-                                  alt="portrait"
+                                  src="./assets/wedding/DSC_5740-2.jpg"
+                                  alt="wedding"
                                 />
                               </div>
                             </div>
@@ -371,7 +372,7 @@ export default function Collection(props) {
                       <Row>
                       <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
-                            <Link to="/weddings">
+                            <Link to="/portrait">
                               <div>
                                 <div className="image-tile">
                                   <div
@@ -384,7 +385,7 @@ export default function Collection(props) {
                                       left: 20,
                                     }}
                                   >
-                                    Weddings
+                                    Portrait
                                   </div>
                                   <img
                                     style={{
@@ -393,8 +394,8 @@ export default function Collection(props) {
                                       objectFit: "cover",
                                     }}
                                     onLoad={imageLoaded}
-                                    src="./assets/wedding/DSC_5740-2.jpg"
-                                    alt="weddings"
+                                    src="./assets/portrait/stu.jpg"
+                                    alt="portrait"
                                   />
                                 </div>
                               </div>
@@ -435,7 +436,7 @@ export default function Collection(props) {
                         </Col>
                         <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
-                            <Link to="/portrait">
+                            <Link to="/weddings">
                               <div>
                                 <div className="image-tile">
                                   <div
@@ -448,7 +449,7 @@ export default function Collection(props) {
                                       left: 20,
                                     }}
                                   >
-                                    Portrait
+                                    Weddings
                                   </div>
                                   <img
                                     style={{
@@ -457,14 +458,15 @@ export default function Collection(props) {
                                       objectFit: "cover",
                                     }}
                                     onLoad={imageLoaded}
-                                    src="./assets/portrait/stu.jpg"
-                                    alt="portrait"
+                                    src="./assets/wedding/DSC_5740-2.jpg"
+                                    alt="weddings"
                                   />
                                 </div>
                               </div>
                             </Link>
                           </Fade>
                         </Col>
+                        
 
                         <Col lg={6} style={{ marginBottom: 30 }}>
                           <Fade opposite>
