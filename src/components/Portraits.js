@@ -15,6 +15,12 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
+
+const folder = "./assets/portrait/"
+let imageList = ["stu.jpg","stu2-min.jpg", "stu3-min.jpg","DSC_5961-min.jpg","noah1.jpg", "noah2.jpg","hooman-min.jpg", 'hooman2-min.jpg',"hooman3-min.jpg","DSC_6147-min.jpg","DSC_4589.jpg","DSC_4739.jpg","janagan1-min.jpg","janagan2-min.jpg","janagan_lamp.jpg","twins-min.jpg","grandpa1-min.jpg","jd2-min.jpg"]
+imageList = imageList.map(i => folder + i);
+
+
 export default function Portraits(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
@@ -88,75 +94,75 @@ export default function Portraits(props) {
                   
                     <div style={{ display: desktop ? "block" : "none" }}>
                       <SingleImage
-                        image="./assets/portrait/stu.jpg"
+                        image={imageList[0]}
                         dimensions={[2, 8, 2]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/portrait/stu2-min.jpg", "./assets/portrait/stu3-min.jpg"]}
+                        images={[imageList[1], imageList[2]]}
                         dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/jd-min.jpg"
+                        image={imageList[3]}
                         dimensions={[3, 6, 3]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       
                       <TwoImages
-                        images={["./assets/portrait/noah1.jpg", "./assets/portrait/noah2.jpg"]}
+                        images={[imageList[4], imageList[5]]}
                         dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/hooman-min.jpg"
+                        image={imageList[6]}
                         dimensions={[5, 6, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/portrait/hooman2-min.jpg", "./assets/portrait/hooman3-min.jpg"]}
+                        images={[imageList[7], imageList[8]]}
                         dimensions={[1, 4, 1, 6]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       
                       <SingleImage
-                        image="./assets/portrait/swetanoosh-min.jpg"
-                        dimensions={[1, 10, 1]}
+                        image={imageList[9]}
+                        dimensions={[3, 6, 3]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/portrait/DSC_4589.jpg", "./assets/portrait/DSC_4739.jpg"]}
+                        images={[imageList[10], imageList[11]]}
                         dimensions={[1, 5, 1, 5]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/portrait/janagan1-min.jpg", "./assets/portrait/janagan2-min.jpg"]}
+                        images={[imageList[12], imageList[13]]}
                         dimensions={[1, 4, 1, 6]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/janagan_lamp.jpg"
+                        image={imageList[14]}
                         dimensions={[2, 6, 4]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/twins-min.jpg"
+                        image={imageList[15]}
                         dimensions={[2, 5, 5]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <TwoImages
-                        images={["./assets/portrait/grandpa1-min.jpg", "./assets/portrait/jd2-min.jpg"]}
+                        images={[imageList[16], imageList[17]]}
                         dimensions={[1, 6, 1, 4]}
                         positions={[1, 3]}
                         onLoad={imageLoaded}
@@ -165,110 +171,110 @@ export default function Portraits(props) {
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
                       <SingleImage
-                        image="./assets/portrait/stu.jpg"
+                        image={imageList[0]}
                         dimensions={[2, 9, 1]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/stu2-min.jpg"
+                        image={imageList[1]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/stu3-min.jpg"
+                        image={imageList[2]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/jd-min.jpg"
+                        image={imageList[3]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/noah1.jpg"
+                        image={imageList[4]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/noah2.jpg"
+                        image={imageList[5]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/hooman-min.jpg"
+                        image={imageList[6]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/hooman2-min.jpg"
+                        image={imageList[7]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        images="./assets/portrait/hooman3-min.jpg"
+                        images={imageList[8]}
                         dimensions={[1,5,6]}
                         positions={1}
                         onLoad={imageLoaded}
                       />
                      
                       <SingleImage
-                        image="./assets/portrait/swetanoosh-min.jpg"
+                        image={imageList[9]}
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/DSC_4589.jpg"
+                        image={imageList[10]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/DSC_4739.jpg"
+                        image={imageList[11]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/janagan1-min.jpg"
+                        image={imageList[12]}
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/janagan2-min.jpg"
+                        image={imageList[13]}
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/janagan_lamp.jpg"
+                        image={imageList[14]}
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/twins-min.jpg"
+                        image={imageList[15]}
                         dimensions={[1, 5, 6]}
                         position={2}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/grandpa1-min.jpg"
+                        image={imageList[16]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
                       />
                       <SingleImage
-                        image="./assets/portrait/jd2-min.jpg"
+                        image={imageList[17]}
                         dimensions={[1, 5, 6]}
                         position={1}
                         onLoad={imageLoaded}
