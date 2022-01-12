@@ -103,7 +103,7 @@ export default function Collection(props) {
                     <h3
                       style={{
                         textAlign: "left",
-                        fontSize: desktop ? 43 : 35,
+                        fontSize: desktop ? 30 : 27,
                         marginBottom: 5,
                       }}
                     >
@@ -120,9 +120,10 @@ export default function Collection(props) {
                       <p
                         style={{
                           textAlign: "left",
-                          marginTop: 10,
+                          marginTop: 3,
                           marginRight: 30,
                           textDecoration: "overline",
+                          fontSize: 14,
                         }}
                       >
                         Contact
@@ -132,9 +133,10 @@ export default function Collection(props) {
                       <p
                         style={{
                           textAlign: "left",
-                          marginTop: 10,
+                          marginTop: 3,
                           marginBottom: 30,
                           textDecoration: "overline",
+                          fontSize: 14,
                         }}
                       >
                         About
