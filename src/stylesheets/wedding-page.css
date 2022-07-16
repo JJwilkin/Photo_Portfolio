@@ -1,0 +1,57 @@
+:root {
+    --txt-color: rgb(192, 92, 57);
+    /* --txt-color: rgb(103, 120, 216); */
+    --bg-color: rgb(255, 247, 236);
+    /* --bg-color: rgb(186, 171, 201); */
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    display: none;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wedding-page-container {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    width: 100%;
+    color: var(--txt-color);
+    scroll-behavior: smooth;
+    padding: 0 50px;
+}
+
+.first-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oval-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.oval-image > img {
+  height: 80%;
+  width: auto;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.left-text {
+  position: absolute;
+  padding-left: 10%;
+}
+
+h1 {
+  animation: slideUp 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+  overflow: hidden;
+  height: 50px;
+  font-size: 1.5rem;
+}

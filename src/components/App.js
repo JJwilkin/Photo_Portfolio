@@ -16,6 +16,7 @@ import ScrollToTop from "./ScrollToTop";
 import About from "./About";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Contact from "./Contact";
+import WeddingPage from "./WeddingPage";
 import { useEffect, useState } from "react";
 
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -127,6 +128,16 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+          />
+        </Route>
+        {/* change to couples names */}
+        <Route exact path="/wedding-page">
+          <WeddingPage
+          // CHANGE THIS
+            firstImageSrc="./assets/joshua2.jpg" 
+            name1 = "Nicki"
+            name2 = "Nicholas"
+            lastName = "Adamson"
           />
         </Route>
       </Switch>
