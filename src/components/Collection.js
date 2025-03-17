@@ -15,6 +15,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from "react-ga";
 import "./Collection.css";
+import CollectionDesktop from "./Collections/Collection_Desktop";
+import CollectionMobile from "./Collections/Collection_Mobile";
 
 export default function Collection(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
@@ -96,484 +98,57 @@ export default function Collection(props) {
                 <div
                   style={{
                     display: loading ? "none" : "block",
-                    marginTop: desktop ? "8vh" : "10vh",
+                    marginTop: desktop ? "18vh" : "10vh",
                   }}
                 >
-                  <Fade bottom>
+                  {/* <Fade bottom>
                     <h3
                       style={{
                         textAlign: "left",
-                        fontSize: desktop ? 30 : 27,
-                        marginBottom: 5,
+                        fontSize: desktop ? 22 : 27,
+                        marginBottom: 8,
                       }}
                     >
                       {" "}
                       Hey, I'm Josh !{" "}
                     </h3>
-                    <p style={{ marginBottom: 20, fontSize: 17 }}>
-                      Welcome to my portfolio. I'm a Toronto based photographer
+                    <p style={{ marginBottom: 20, fontSize: 13 }}>
+                      Welcome to my portfolio. I'm a Toronto based photographer and software developer
                       with a passion for capturing the beauty in people and nature;
                       using my pictures to tell their story. Let's create together!{" "}
                     </p>
-                    <div style={{display:'flex', justifyContent:"flex-start"}}>
-                    <Link to="/contact">
-                      <p
-                        style={{
-                          textAlign: "left",
-                          marginTop: 3,
-                          marginRight: 30,
-                          textDecoration: "overline",
-                          fontSize: 14,
-                        }}
-                      >
-                        Contact
-                      </p>
-                    </Link>
-                    <Link to="/about">
-                      <p
-                        style={{
-                          textAlign: "left",
-                          marginTop: 3,
-                          marginBottom: 30,
-                          textDecoration: "overline",
-                          fontSize: 14,
-                        }}
-                      >
-                        About
-                      </p>
-                    </Link>
-                      </div>
-                    
-                  </Fade>
-                  <div
-                    style={{
-                      display: desktop ? "block" : "none",
-                      marginBottom: 30,
-                    }}
-                  >
-                    <Row>
-                    <Col>
-                        <Fade opposite>
-                          <Link to="/portrait">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Portrait
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/portrait/stu.jpg"
-                                  alt="portrait"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-                      
-                      <Col>
-                        <Fade opposite>
-                          <Link to="/families">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Families
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/families/DSC_4857.jpg"
-                                  alt="families"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-
-                      
-                    </Row>
-                  </div>
-                  <div
-                    style={{
-                      display: desktop ? "block" : "none",
-                      marginBottom: 30,
-                    }}
-                  >
-                    <Row>
-                    <Col>
-                        <Fade opposite>
-                          <Link to="/weddings">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Weddings
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/wedding/DSC_5740-2.jpg"
-                                  alt="wedding"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-                    <Col>
-                        <Fade opposite>
-                          <Link to="/toronto">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Toronto
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/toronto/toronto11.jpg"
-                                  alt="toronto"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-                     
-                    </Row>
-                  </div>
-                  <div
-                    style={{
-                      display: desktop ? "block" : "none",
-                    }}
-                  >
-                    <Row>
-                      <Col style={{ marginBottom: 30 }}>
-                        <Fade opposite>
-                          <Link to="/banff">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Banff
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/banff/blueMountain.jpg"
-                                  alt="banff"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-
-                      <Col style={{ marginBottom: 30 }}>
-                        <Fade opposite>
-                          <Link to="/yellowstone">
-                            <div>
-                              <div className="image-tile">
-                                <div
-                                  style={{
-                                    fontSize: 30,
-
-                                    color: "white",
-                                    position: "absolute",
-                                    bottom: 10,
-                                    left: 20,
-                                  }}
-                                >
-                                  Yellowstone
-                                </div>
-                                <img
-                                  style={{
-                                    width: "100%",
-                                    height: "30vh",
-                                    objectFit: "cover",
-                                  }}
-                                  onLoad={imageLoaded}
-                                  src="./assets/landscape/DSC_2083-2.jpg"
-                                  alt="Yellowstone"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </Fade>
-                      </Col>
-                    </Row>
-                  </div>
-
-                  <div style={{ display: desktop ? "none" : "block" }}>
-                    <div>
-                      <Row>
-                      <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/portrait">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
-
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Portrait
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/portrait/stu.jpg"
-                                    alt="portrait"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-                        <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/families">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
-
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Families
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/families/DSC_4857.jpg"
-                                    alt="families"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-                        <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/weddings">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
-
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Weddings
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/wedding/DSC_5740-2.jpg"
-                                    alt="weddings"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-                        
-
-                        <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/toronto">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
-
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Toronto
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/toronto/toronto11.jpg"
-                                    alt="toronto"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-                      </Row>
+                    <div style={{ display: 'flex', justifyContent: "flex-start" }}>
+                      <Link to="/contact">
+                        <p
+                          style={{
+                            textAlign: "left",
+                            marginTop: 3,
+                            marginRight: 30,
+                            textDecoration: "overline",
+                            fontSize: 12,
+                          }}
+                        >
+                          Contact
+                        </p>
+                      </Link>
+                      <Link to="/about">
+                        <p
+                          style={{
+                            textAlign: "left",
+                            marginTop: 3,
+                            marginBottom: 30,
+                            textDecoration: "overline",
+                            fontSize: 12,
+                          }}
+                        >
+                          About
+                        </p>
+                      </Link>
                     </div>
-                    <div>
-                      <Row>
-                        <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/banff">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
 
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Banff
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/banff/blueMountain.jpg"
-                                    alt="banff"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-
-                        <Col lg={6} style={{ marginBottom: 30 }}>
-                          <Fade opposite>
-                            <Link to="/yellowstone">
-                              <div>
-                                <div className="image-tile">
-                                  <div
-                                    style={{
-                                      fontSize: 25,
-
-                                      color: "white",
-                                      position: "absolute",
-                                      bottom: 10,
-                                      left: 20,
-                                    }}
-                                  >
-                                    Yellowstone
-                                  </div>
-                                  <img
-                                    style={{
-                                      width: "100%",
-                                      height: "30vh",
-                                      objectFit: "cover",
-                                    }}
-                                    onLoad={imageLoaded}
-                                    src="./assets/landscape/DSC_2083-2.jpg"
-                                    alt="Yellowstone"
-                                  />
-                                </div>
-                              </div>
-                            </Link>
-                          </Fade>
-                        </Col>
-                      </Row>
-                    </div>
-                  </div>
+                  </Fade> */}
+                  <CollectionDesktop imageLoaded={imageLoaded}/>
+                   <CollectionMobile imageLoaded={imageLoaded} />
                 </div>
               </Col>
             </Row>

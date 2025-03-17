@@ -8,7 +8,7 @@ import "../stylesheets/App.css";
 import "../stylesheets/Hamburger.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage.js";
-import Toronto from "./Toronto.js";
+import Corporate from "./Corporate.js";
 import Collection from "./Collection.js";
 import Yellowstone from "./Yellowstone.js";
 import Banff from './Banff.js';
@@ -16,6 +16,7 @@ import ScrollToTop from "./ScrollToTop";
 import About from "./About";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Contact from "./Contact";
+import ImageGallery from './ImageGallery';
 import { useEffect, useState } from "react";
 
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -35,7 +36,7 @@ function App() {
 //     ReactGA.pageview(location.pathname); // Record a pageview for the given page
 //   });
   const [showMenu, setShowMenu] = useState(false);
-
+  const [theme, setTheme] = useState("dark")
   const [showFade, setShowFade] = useState(false);
   const desktop = useMediaQuery("(min-width:1000px)");
   useEffect(() => {}, [showFade, showMenu]);
@@ -53,6 +54,7 @@ function App() {
           customBurgerIcon={
             <div>
               <HiMenuAlt4
+                color={theme === "dark" ? "white" : "black"}
                 size={35}
                 onClick={() => {
                   setShowMenu(true);
@@ -71,6 +73,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/weddings">
@@ -78,6 +82,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/families">
@@ -85,6 +91,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/portrait">
@@ -92,6 +100,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/yellowstone">
@@ -99,13 +109,17 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
-        <Route exact path="/toronto">
-          <Toronto
+        <Route exact path="/corporate">
+          <Corporate
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/banff">
@@ -113,6 +127,16 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
+          />
+        </Route>
+        <Route exact path="/gallery">
+          <ImageGallery
+            showFade={showFade}
+            setShowFade={setShowFade}
+            showMenu={showMenu}
+            setTheme={setTheme}
           />
         </Route>
         <Route exact path="/about">
@@ -120,6 +144,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
         <Route exact path="/contact">
@@ -127,6 +153,8 @@ function App() {
             showFade={showFade}
             setShowFade={setShowFade}
             showMenu={showMenu}
+            setTheme={setTheme}
+
           />
         </Route>
       </Switch>

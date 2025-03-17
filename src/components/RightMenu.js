@@ -13,7 +13,7 @@ export default function RightMenu(props) {
       <Fade when={showFade}>
       <div className="margin-right">
         <a target="_blank" href="https://instagram.com/jxshooter/">
-          <InstagramOutlined style={{ fontSize: 30 }} />
+          <InstagramOutlined style={{ fontSize: 25 }} />
         </a>
       </div>
 
@@ -21,7 +21,7 @@ export default function RightMenu(props) {
       <div className="margin-right">
         <Link to="/about">
           <h6
-            className={`${
+            className={`menu-text ${
               selectedOption == "about" ? "active-link" : "dim-text"
             }`}
           >

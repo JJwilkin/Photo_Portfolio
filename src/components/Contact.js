@@ -14,7 +14,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ReactGA from 'react-ga';
 
 export default function Contact(props) {
-  const { showFade, setShowFade, showMenu } = props;
+  const { showFade, setShowFade, showMenu, setTheme } = props;
   const [loading, setLoading] = useState(true);
   const desktop = useMediaQuery("(min-width:1000px)");
 

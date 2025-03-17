@@ -5,6 +5,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-photo-view/dist/react-photo-view.css';
 
 ReactDOM.render(
   <React.StrictMode>

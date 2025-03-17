@@ -16,6 +16,10 @@
     flex-direction: column;
 }
 
+.pad-top {
+    padding-top:14vh;
+}
+
 .page-title {
     height:auto;
     margin-top:6vh;

@@ -15,7 +15,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
 
-export default function Toronto(props) {
+export default function Corporate(props) {
   const desktop = useMediaQuery("(min-width:1000px)");
   const { showFade, setShowFade, showMenu } = props;
   const [loading, setLoading] = useState(true);
@@ -61,7 +61,7 @@ export default function Toronto(props) {
           <Col lg={1}>
             {desktop ? (
               <Menu
-                selectedOption="toronto"
+                selectedOption="corporate"
                 showFade={showFade}
                 setShowFade={setShowFade}
               />
@@ -81,7 +81,7 @@ export default function Toronto(props) {
                 </Fade>
                 <div style={{ display: loading ? "none" : "block" }}>
                   <PageTitleDescription
-                    title="TORONTO"
+                    title="CORPORATE"
                     description={`"When I think of myself, I think of Toronto. My music would never sound the way it does if it weren't for this city"`}
                     author="- Drake"
                     style={{ display: loading ? "none" : "block" }}

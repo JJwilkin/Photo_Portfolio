@@ -17,6 +17,9 @@
     border-bottom: 1px solid white;
 }
 
+.menu-text {
+font-size: smaller;
+}
 
 .menu {
     display:flex;

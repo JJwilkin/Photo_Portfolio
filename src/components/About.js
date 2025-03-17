@@ -116,11 +116,7 @@ export default function About(props) {
 
                             <p className="left-align small-text">
                             
-                            Lastly some acknowledgements, I'm a softward developer by day and built this website from
-                            scratch with the help and support of my girlfriend Aliya. It was originally created
-                            as a medium to document my journey through
-                            photography but has since grown to so much more. Thank you for reading up to this far,
-                            and I hope my work brings you joy. Please feel free reach out to me over the phone or instagram and we
+                            Please feel free reach out to me over the phone or instagram and we
                             can make some great work! Lastly, if I had to choose a quote
                             to describe how I view photography it would be this:
                           </p>

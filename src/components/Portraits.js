@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
+import { PhotoProvider } from 'react-photo-view';
 
 const folder = "./assets/portrait/"
 let imageList = ["stu.jpg","stu2-min.jpg", "stu3-min.jpg","DSC_5961-min.jpg","noah1.jpg", "noah2.jpg","hooman-min.jpg", 'hooman2-min.jpg',"hooman3-min.jpg","DSC_6147-min.jpg","DSC_4589.jpg","DSC_4739.jpg","janagan1-min.jpg","janagan2-min.jpg","janagan_lamp.jpg","twins-min.jpg","grandpa1-min.jpg","jd2-min.jpg"]
@@ -84,15 +85,16 @@ export default function Portraits(props) {
                     <LoadingAnimation />
                   </div>
                 </Fade>
-                <div style={{ display: loading ? "none" : "block" }}>
-                  <PageTitleDescription
+                <div className="pad-top" style={{ display: loading ? "none" : "block" }}>
+                  {/* <PageTitleDescription
                     title="PORTRAIT"
                     description='"There is one thing the photograph must contain, the humanity of the moment"'
                     author="- Robert Frank"
                     style={{ display: loading ? "none" : "block" }}
-                  />
+                  /> */}
                   
                     <div style={{ display: desktop ? "block" : "none" }}>
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 8, 2]}
@@ -167,9 +169,11 @@ export default function Portraits(props) {
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
+                  </PhotoProvider>
                     </div>
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 9, 1]}
@@ -279,6 +283,7 @@ export default function Portraits(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
+                      </PhotoProvider>
                     </div>
                   
                 </div>
@@ -292,7 +297,7 @@ export default function Portraits(props) {
         <Row style={loading ? { display: "none" } : null}>
           <Col lg={12}>
             {desktop ? null : (
-              <MobileBottomNav name="Toronto" route="/toronto" />
+              <MobileBottomNav name="Corporate" route="/corporate" />
             )}
           </Col>
         </Row>

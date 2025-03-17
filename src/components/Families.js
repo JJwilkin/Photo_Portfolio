@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
+import { PhotoProvider } from 'react-photo-view';
 
 const folder = "./assets/families/"
 let imageList = ["DSC_4512.jpg","DSC_4419.jpg","DSC_4687.jpg","DSC_4768.jpg","DSC_4782.jpg","DSC_4812.jpg","DSC_4819.jpg","DSC_4857.jpg",'DSC_4883.jpg',"DSC_4919.jpg"]
@@ -85,15 +86,16 @@ export default function Families(props) {
                     <LoadingAnimation />
                   </div>
                 </Fade>
-                <div style={{ display: loading ? "none" : "block" }}>
-                  <PageTitleDescription
+                <div className="pad-top" style={{ display: loading ? "none" : "block" }}>
+                  {/* <PageTitleDescription
                     title="FAMILIES"
                     description='"When all the dust is settled and all the crowds are gone, the things that matter are faith, family, and friends."'
                     author="- Barbara Bush"
                     style={{ display: loading ? "none" : "block" }}
-                  />
+                  /> */}
                   
                     <div style={{ display: desktop ? "block" : "none" }}>
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 8, 2]}
@@ -137,10 +139,11 @@ export default function Families(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
-
+                    </PhotoProvider>
                     </div>
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 9, 1]}
@@ -201,7 +204,7 @@ export default function Families(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
-                      
+                      </PhotoProvider>
                     </div>
                   
                 </div>

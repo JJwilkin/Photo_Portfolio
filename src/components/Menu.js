@@ -32,7 +32,37 @@ export default function Menu(props) {
 
         <div>
           <table>
-          <tr>
+          
+           
+            <tr>
+              <Link
+                to="/portrait"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("portrait");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col menu-text ${
+                    selectedOption == "portrait" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  01
+                </td>
+                <td>
+                  <h6
+                    className={`menu-text ${
+                      selectedOption == "portrait" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    Portraits
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
               <Link
                 to="/weddings"
                 onClick={() => {
@@ -43,19 +73,19 @@ export default function Menu(props) {
                 }}
               >
                 <td
-                  className={`num-col ${
+                  className={`menu-text num-col ${
                     selectedOption == "weddings" ? "active-link" : "dim-text"
                   }`}
                 >
-                  01
+                  02
                 </td>
                 <td>
                   <h6
-                    className={`${
+                    className={`menu-text ${
                       selectedOption == "weddings" ? "active-link" : "dim-text"
                     }`}
                   >
-                    WEDDINGS
+                    Weddings
                   </h6>
                 </td>
               </Link>
@@ -71,80 +101,52 @@ export default function Menu(props) {
                 }}
               >
                 <td
-                  className={`num-col ${
+                  className={`num-col menu-text ${
                     selectedOption == "families" ? "active-link" : "dim-text"
-                  }`}
-                >
-                  02
-                </td>
-                <td>
-                  <h6
-                    className={`${
-                      selectedOption == "families" ? "active-link" : "dim-text"
-                    }`}
-                  >
-                    FAMILIES
-                  </h6>
-                </td>
-              </Link>
-            </tr>
-            <tr>
-              <Link
-                to="/portrait"
-                onClick={() => {
-                  if (!desktop) {
-                    setOption("portrait");
-                    setShowMenu(false);
-                  }
-                }}
-              >
-                <td
-                  className={`num-col ${
-                    selectedOption == "portrait" ? "active-link" : "dim-text"
                   }`}
                 >
                   03
                 </td>
                 <td>
                   <h6
-                    className={`${
-                      selectedOption == "portrait" ? "active-link" : "dim-text"
+                    className={`menu-text ${
+                      selectedOption == "families" ? "active-link" : "dim-text"
                     }`}
                   >
-                    PORTRAITS
+                    Families
+                  </h6>
+                </td>
+              </Link>
+            </tr>
+            <tr>
+              <Link
+                to="/corporate"
+                onClick={() => {
+                  if (!desktop) {
+                    setOption("corporate");
+                    setShowMenu(false);
+                  }
+                }}
+              >
+                <td
+                  className={`num-col menu-text ${
+                    selectedOption == "corporate" ? "active-link" : "dim-text"
+                  }`}
+                >
+                  04
+                </td>
+                <td>
+                  <h6
+                    className={` menu-text ${
+                      selectedOption == "corporate" ? "active-link" : "dim-text"
+                    }`}
+                  >
+                    Corporate
                   </h6>
                 </td>
               </Link>
             </tr>
             {/* <tr>
-              <Link
-                to="/toronto"
-                onClick={() => {
-                  if (!desktop) {
-                    setOption("toronto");
-                    setShowMenu(false);
-                  }
-                }}
-              >
-                <td
-                  className={`num-col ${
-                    selectedOption == "toronto" ? "active-link" : "dim-text"
-                  }`}
-                >
-                  03
-                </td>
-                <td>
-                  <h6
-                    className={`${
-                      selectedOption == "toronto" ? "active-link" : "dim-text"
-                    }`}
-                  >
-                    TORONTO
-                  </h6>
-                </td>
-              </Link>
-            </tr>
-            <tr>
               <Link
                 to="/yellowstone"
                 onClick={() => {
@@ -171,8 +173,8 @@ export default function Menu(props) {
                   </h6>
                 </td>
               </Link>
-            </tr>
-            <tr>
+            </tr> */}
+            {/* <tr>
               <Link
                 to="/banff"
                 onClick={() => {
@@ -211,7 +213,7 @@ export default function Menu(props) {
                 }}
               >
                 <td
-                  className={`num-col ${
+                  className={`num-col menu-text ${
                     selectedOption == "collections" ? "active-link" : "dim-text"
                   }`}
                 >
@@ -219,11 +221,11 @@ export default function Menu(props) {
                 </td>
                 <td>
                   <h6
-                    className={`${
+                    className={`menu-text ${
                       selectedOption == "collections" ? "active-link" : "dim-text"
                     }`}
                   >
-                    COLLECTIONS
+                    Collections
                   </h6>
                 </td>
               </Link>
@@ -242,7 +244,7 @@ export default function Menu(props) {
             }}
           >
             <h6
-              className={`${
+              className={`menu-text ${
                 selectedOption == "contact" ? "active-link" : "dim-text"
               }`}
             >
@@ -260,7 +262,7 @@ export default function Menu(props) {
               }}
             >
               <h6
-                className={`${
+                className={`menu-text ${
                   selectedOption == "about" ? "active-link" : "dim-text"
                 }`}
               >

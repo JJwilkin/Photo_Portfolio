@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import MobileBottomNav from "./MobileBottomNav";
 import ReactGA from 'react-ga';
+import { PhotoProvider } from 'react-photo-view';
 
 const folder = "./assets/wedding/"
 let imageList = ["DSC_5562.jpg","DSC_5602.jpg","DSC_5640.jpg","DSC_5650.jpg","DSC_5472.jpg", "DSC_5616-2.jpg","DSC_3974.jpg", "DSC_5653.jpg","DSC_5498.jpg","DSC_5671.jpg","DSC_5696.jpg","DSC_5740-2.jpg","DSC_5589.jpg","DSC_5554.jpg", "DSC_5562.jpg"]
@@ -85,15 +86,16 @@ export default function Wedding(props) {
                     <LoadingAnimation />
                   </div>
                 </Fade>
-                <div style={{ display: loading ? "none" : "block" }}>
-                  <PageTitleDescription
+                <div  className="pad-top" style={{ display: loading ? "none" : "block"}}>
+                  {/* <PageTitleDescription
                     title="WEDDINGS"
                     description='"You know you’re in love when you can’t fall asleep because reality is finally better than your dreams."'
                     author="- Dr.Seuss"
                     style={{ display: loading ? "none" : "block" }}
-                  />
+                  /> */}
                   
                     <div style={{ display: desktop ? "block" : "none" }}>
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 8, 2]}
@@ -155,9 +157,11 @@ export default function Wedding(props) {
                         positions={[1, 3]}
                         onLoad={imageLoaded}
                       />
+                      </PhotoProvider>
                     </div>
                   
                     <div style={{ display: desktop ? "none" : "block" }}> 
+                      <PhotoProvider>
                       <SingleImage
                         image={imageList[0]}
                         dimensions={[2, 9, 1]}
@@ -248,6 +252,7 @@ export default function Wedding(props) {
                         position={1}
                         onLoad={imageLoaded}
                       />
+                      </PhotoProvider>
                     </div>
                   
                 </div>
